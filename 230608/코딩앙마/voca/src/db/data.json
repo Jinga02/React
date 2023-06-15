@@ -1,0 +1,89 @@
+{
+  "days": [
+    {
+      "id": 1,
+      "day": 1
+    },
+    {
+      "id": 2,
+      "day": 2
+    },
+    {
+      "id": 3,
+      "day": 3
+    },
+    {
+      "day": 4,
+      "id": 4
+    },
+    {
+      "day": 5,
+      "id": 5
+    }
+  ],
+  "words": [
+    {
+      "id": 2,
+      "day": 1,
+      "eng": "cat",
+      "kor": "고양이",
+      "isDone": false
+    },
+    {
+      "id": 3,
+      "day": 2,
+      "eng": "car",
+      "kor": "자동차",
+      "isDone": false
+    },
+    {
+      "id": 4,
+      "day": 2,
+      "eng": "fuck",
+      "kor": "씨발",
+      "isDone": false
+    },
+    {
+      "id": 5,
+      "day": 3,
+      "eng": "sky",
+      "kor": "하늘",
+      "isDone": false
+    },
+    {
+      "id": 6,
+      "day": 3,
+      "eng": "dog",
+      "kor": "개",
+      "isDone": false
+    },
+    {
+      "day": "3",
+      "eng": "window",
+      "kor": "창문",
+      "isDone": false,
+      "id": 7
+    },
+    {
+      "day": "2",
+      "eng": "array",
+      "kor": "배열",
+      "isDone": false,
+      "id": 8
+    },
+    {
+      "day": "4",
+      "eng": "apple",
+      "kor": "사과",
+      "isDone": false,
+      "id": 9
+    },
+    {
+      "day": "1",
+      "eng": "banana",
+      "kor": "바나나",
+      "isDone": false,
+      "id": 10
+    }
+  ]
+}

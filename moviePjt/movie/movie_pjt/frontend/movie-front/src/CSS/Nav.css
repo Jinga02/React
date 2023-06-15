@@ -1,0 +1,35 @@
+#Nav {
+  background-color: rgb(0, 0, 0);
+  height: 70px;
+  display: flex;
+}
+#logo {
+  width: 10%;
+}
+
+#logo img {
+  margin: 0 10px;
+
+  height: 70px;
+}
+
+#menu {
+  width: 80%;
+  color: white;
+  display: flex;
+}
+
+#menu input {
+  margin: auto;
+  height: 50%;
+  width: 200px;
+  background: none;
+  color: white;
+  font-size: 20px;
+}
+
+#user {
+  width: 10%;
+  color: white;
+  display: flex;
+}

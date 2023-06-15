@@ -1,0 +1,282 @@
+[
+    {
+        "model": "movies.nowplaying",
+        "pk": 385687,
+        "fields": {
+            "title": "분노의 질주: 라이드 오어 다이",
+            "release_date": "2023-05-17",
+            "popularity": 1905.026,
+            "vote_count": 47,
+            "vote_average": 6.8,
+            "overview": "돔과 그의 패밀리 앞에 나타난 운명의 적 단테. 과거의 그림자는 돔의 모든 것을 파괴하기 위해 달려온다. 단테에 의해 산산히 흩어진 패밀리들은 모두 목숨을 걸고 맞서야 하는 함정에 빠지고 마는데...",
+            "poster_path": "/3JT1oE0JIA6CQJaZDG00y3S0kP3.jpg",
+            "youtube_key": "eoOaKN4qCKw"
+        }
+    },
+    {
+        "model": "movies.nowplaying",
+        "pk": 447365,
+        "fields": {
+            "title": "가디언즈 오브 갤럭시: Volume 3",
+            "release_date": "2023-05-03",
+            "popularity": 1886.128,
+            "vote_count": 1237,
+            "vote_average": 8.2,
+            "overview": "가모라를 잃고 슬픔에 빠져 있던 피터 퀼이 위기에 처한 은하계와 동료를 지키기 위해 다시 한 번 가디언즈 팀과 힘을 모으고, 성공하지 못할 경우 그들의 마지막이 될지도 모르는 미션에 나서는 이야기.",
+            "poster_path": "/b7epV2cQZVIR4u5VZraDwD0AgiE.jpg",
+            "youtube_key": "c8cZzltEH2Q"
+        }
+    },
+    {
+        "model": "movies.nowplaying",
+        "pk": 493529,
+        "fields": {
+            "title": "던전 앤 드래곤 - 도적들의 명예",
+            "release_date": "2023-03-23",
+            "popularity": 706.82,
+            "vote_count": 1221,
+            "vote_average": 7.5,
+            "overview": "한때는 명예로운 기사였지만, 어떤 사건 이후 홀가, 사이먼, 포지와 함께 도적질을 하게 된 에드긴. 소피나의 제안으로 부활의 서판을 얻기 위해 코린의 성에 잠입하지만 포지와 소피나의 배신으로 실패하고 감옥에 갇힌다. 기발한 방법으로 탈옥에 성공한 에드긴과 홀가는 소중한 사람들과 다시 만나고, 부활의 서판도 되찾기 위해  자신만의 팀을 꾸리기 시작한다. 옛 동료인 소질 없는 소서러 사이먼과 새롭게 합류한 변신 천재 드루이드 도릭, 재미 빼고 다 가진 팔라딘 젠크까지 어딘가 2% 부족한 오합지졸로 가득한 이 팀, 과연 무사히 모험을 끝마칠 수 있을까?",
+            "poster_path": "/eg4vGqZo1BpjY3ZoCUAGk09Pq7T.jpg",
+            "youtube_key": "zEcieXSHV34"
+        }
+    },
+    {
+        "model": "movies.nowplaying",
+        "pk": 502356,
+        "fields": {
+            "title": "슈퍼 마리오 브라더스",
+            "release_date": "2023-04-05",
+            "popularity": 6545.223,
+            "vote_count": 2410,
+            "vote_average": 7.6,
+            "overview": "따단-딴-따단-딴 ♫ 전 세계를 열광시킬 올 타임 슈퍼 어드벤처의 등장! 뉴욕의 평범한 배관공 형제 '마리오'와 ‘루이지’는 배수관 고장으로 위기에 빠진 도시를 구하려다 미스터리한 초록색 파이프 안으로 빨려 들어가게 된다. 파이프를 통해 새로운 세상으로 차원 이동하게 된 형제. 형 '마리오'는 뛰어난 리더십을 지닌 '피치'가 통치하는 버섯왕국에 도착하지만 동생 '루이지'는 빌런 '쿠파'가 있는 다크랜드로 떨어지며 납치를 당하고 ‘마리오’는 동생을 구하기 위해 ‘피치’와 ‘키노피오’의 도움을 받아 '쿠파'에 맞서기로 결심한다. 그러나 슈퍼스타로 세상을 지배하려는 그의 강력한 힘 앞에 이들은 예기치 못한 위험에 빠지게 되는데...!",
+            "poster_path": "/dlGyzCxbBQK1U2O5o31Z1hB6erc.jpg",
+            "youtube_key": "LTFGH0rJ-EY"
+        }
+    },
+    {
+        "model": "movies.nowplaying",
+        "pk": 552688,
+        "fields": {
+            "title": "내 이름은 마더",
+            "release_date": "2023-05-04",
+            "popularity": 544.953,
+            "vote_count": 336,
+            "vote_average": 6.8,
+            "overview": "은둔 생활을 하던 군 출신 암살자. 복수에 혈안이 된 무자비한 범죄자들의 손아귀에서 한 번도 만난 적 없는 딸을 지키기 위해 세상 밖으로 나온다.",
+            "poster_path": "/vnRthEZz16Q9VWcP5homkHxyHoy.jpg",
+            "youtube_key": "DUA2LT6sRPk"
+        }
+    },
+    {
+        "model": "movies.nowplaying",
+        "pk": 603692,
+        "fields": {
+            "title": "존 윅 4",
+            "release_date": "2023-03-22",
+            "popularity": 1100.584,
+            "vote_count": 1410,
+            "vote_average": 7.9,
+            "overview": "죽을 위기에서 살아난 존 윅은 최고 회의를 쓰러트릴 방법을 찾아낸다. 비로소 완전한 자유의 희망을 보지만, 빌런 그라몽 후작과 전 세계의 최강 연합은 존 윅의 오랜 친구까지 적으로 만들어 버리고, 새로운 위기에 놓인 존 윅은 최후의 반격을 준비하는데...",
+            "poster_path": "/9WF6TxCYwdiZw51NM92ConaQz1w.jpg",
+            "youtube_key": "vBwj0QpKbSM"
+        }
+    },
+    {
+        "model": "movies.nowplaying",
+        "pk": 649609,
+        "fields": {
+            "title": "렌필드",
+            "release_date": "2023-04-07",
+            "popularity": 905.271,
+            "vote_count": 399,
+            "vote_average": 7.1,
+            "overview": "정년 보장 + 평생 직장의 대가는 밤낮없는 24시간 FULL 근무? 사내 복지는 만성 피로, 불면증, 소화불량, 짙은 다크서클입니다! 불멸의 삶과 폭발적인 힘의 대가는 악당용 배민이 되는 것?! ‘드라큘라’에게 취업 사기를 당하고 24시간 밤낮없이 그에게 순결한 제물을 바치는 직속비서 ‘렌필드’는 남들과 다른 특별한 꼰대 상사에 점차 피폐해져 간다. 그러던 어느 날, 여느 때처럼 ‘드라큘라’에게 바칠 제물을 찾던 중 자신의 인생을 뒤바꿔줄 친구 ‘레베카’를 만나게 되고 지금껏 가슴 한 켠에 숨 죽여 있었던 퇴사의 희망을 발견하게 되는데.. 과연 퇴사 없는 종신계약에서 ‘렌필드’는 벗어날 수 있을까?  슈퍼 을(乙) ‘렌필드’, 자네 꿈이 뭔가? “이 지독한 관계에서 벗어나고 싶어요! 퇴사하겠습니다!”",
+            "poster_path": "/wJXgQ3FgVIyVUwdoaKoeobET3po.jpg",
+            "youtube_key": "CRudtvaPvkM"
+        }
+    },
+    {
+        "model": "movies.nowplaying",
+        "pk": 700391,
+        "fields": {
+            "title": "65",
+            "release_date": "2023-03-02",
+            "popularity": 415.237,
+            "vote_count": 1043,
+            "vote_average": 6.3,
+            "overview": "우주 비행 중 행성과의 치명적인 충돌이 일어난 후, 조종사 밀스와 유일한 탑승 생존자 코아는 6,500만 년 전 공룡의 시대 지구에 불시착한다.  모든 것이 위험과 죽음과 맞닿아 있는 상황, 그들은 거대한 행성과의 충돌 전, 반드시 지구를 탈출해야만 한다!",
+            "poster_path": "/o9ItQpKVvhGcAcJFyIpFM7YYKuv.jpg",
+            "youtube_key": "xYl2diyeN88"
+        }
+    },
+    {
+        "model": "movies.nowplaying",
+        "pk": 713704,
+        "fields": {
+            "title": "이블 데드 라이즈",
+            "release_date": "2023-04-12",
+            "popularity": 4093.281,
+            "vote_count": 1064,
+            "vote_average": 7.1,
+            "overview": "길바닥에서 지친 베스가 비좁은 아파트에서 세 아이를 키우는 엘리를 뒤늦게 찾아간다. 아파트에서 신비로운 책이 발견되며 육체에 사로잡힌 악마가 발견되며, 베스가 가장 악몽 같은 버전의 모성애에 직면하게 되면서 생존에 위한 원초적인 싸움에 내몰리게 되는데...",
+            "poster_path": "/5ik4ATKmNtmJU6AYD0bLm56BCVM.jpg",
+            "youtube_key": "2wc5VpRc450"
+        }
+    },
+    {
+        "model": "movies.nowplaying",
+        "pk": 727340,
+        "fields": {
+            "title": "헌트",
+            "release_date": "2022-08-10",
+            "popularity": 863.608,
+            "vote_count": 70,
+            "vote_average": 6.8,
+            "overview": "북한 고위 관리가 망명을 요청한 이후, 안기부 해외팀 차장 박평호와 국내팀 차장 김정도는 동림으로 알려진 안기부 내 스파이, 남파간첩 총책임자를 밝혀내는 임무를 맡는다. 이윽고 동림이 국가 안보를 위태롭게 할 1급 비밀 정보를 누설하기 시작하고 안기부의 해외팀과 국내팀은 서로를 조사하기에 이른다. 당장 스파이를 밝혀내지 못하면 자신이 혐의를 받을 수 있는 일촉즉발의 상황에서 평호와 정도는 서서히 진실을 찾아내고, 마침내 대한민국 1호 암살 작전이라는 거대한 사건과 직면하게 되는데...",
+            "poster_path": "/owt8hAoRxyK2tkLj9G0nh0r3Vpr.jpg",
+            "youtube_key": "tIjDWjI746U"
+        }
+    },
+    {
+        "model": "movies.nowplaying",
+        "pk": 758323,
+        "fields": {
+            "title": "엑소시스트: 더 바티칸",
+            "release_date": "2023-04-05",
+            "popularity": 2034.653,
+            "vote_count": 989,
+            "vote_average": 7.2,
+            "overview": "바티칸이 인정한 공식 수석 엑소시스트이자 최고의 구마사제 '가브리엘 아모르트’ 신부(러셀 크로우)는 한 어린 소년에게 들린 악마를 구마하기 위해 스페인으로 향한다. 그리고 그곳에서 바티칸이 숨겨온 충격적인 비밀과 마주하고, '토마스 에스퀴벨’ 신부(다니엘 조바토)와 함께 진실을 파헤치게 되는데...",
+            "poster_path": "/fA1xRPplBqW87wWh0hO1pwbQmX8.jpg",
+            "youtube_key": "R16ysWgt6oM"
+        }
+    },
+    {
+        "model": "movies.nowplaying",
+        "pk": 804150,
+        "fields": {
+            "title": "코카인 베어",
+            "release_date": "2023-02-22",
+            "popularity": 495.651,
+            "vote_count": 1036,
+            "vote_average": 6.3,
+            "overview": "1985년 마약 밀매업자의 비행기 추락 사고로 인해 비행기에 실려있던 코카인이 조지아주 채터후치 국유림에 떨어지고 코카인을 손에 넣기 위한 마약상들과 관광객들이 코카인을 먹은 흑곰에 의해 처참하게 죽임을 당한다는 내용의 실화를 바탕으로 한 영화",
+            "poster_path": "/gOnmaxHo0412UVr1QM5Nekv1xPi.jpg",
+            "youtube_key": "Hr39beLiyCw"
+        }
+    },
+    {
+        "model": "movies.nowplaying",
+        "pk": 816904,
+        "fields": {
+            "title": "머미즈",
+            "release_date": "2023-01-05",
+            "popularity": 375.267,
+            "vote_count": 279,
+            "vote_average": 7.1,
+            "overview": "고대 세 명의 미라가 고고학자 카나비 경이 훔친 왕실 소유의 오래된 반지를 찾기 위해 런던으로 떠난 여정을 그린 애니메이션",
+            "poster_path": "/g5vkJAPj4XFlaOXZMYE97LZ7lns.jpg",
+            "youtube_key": "60SweMbP5I0"
+        }
+    },
+    {
+        "model": "movies.nowplaying",
+        "pk": 840326,
+        "fields": {
+            "title": "시수",
+            "release_date": "2023-01-27",
+            "popularity": 685.707,
+            "vote_count": 98,
+            "vote_average": 6.7,
+            "overview": "라플란드의 황야 깊은 곳에서 금을 찾던 아타미 코피는 나치 순찰대를 우연히 만나게 되고, 파괴되고 채굴된 라플란드 황야를 가로지르는 숨막히는 추격전이 시작된다.",
+            "poster_path": "/uCAaaAQEDrTllYR4dtsEsfQa8We.jpg",
+            "youtube_key": "ziKvQo1WCRE"
+        }
+    },
+    {
+        "model": "movies.nowplaying",
+        "pk": 842675,
+        "fields": {
+            "title": "유랑지구 2",
+            "release_date": "2023-01-22",
+            "popularity": 1008.84,
+            "vote_count": 186,
+            "vote_average": 7.5,
+            "overview": "태양계 소멸의 위기를 맞은 인류는 지구 표면에 거대한 엔진을 달아 궤도를 옮기는 ‘유랑지구 프로젝트’에 돌입한다. 하지만, 데이터베이스로 영생을 가지려는 ‘디지털 라이프’와 대립하게 되며 프로젝트는 난관에 부딪히게 되고, 그 과정 속 달과의 충돌이라는 예상치 못한 대재앙에 놓이게 되는데… 살아남기 위한 선택은 단 하나, 달을 파괴하라!",
+            "poster_path": "/pajq0n6FZivirCg1ifpe4zYKvsA.jpg",
+            "youtube_key": "23XQsJMYG84"
+        }
+    },
+    {
+        "model": "movies.nowplaying",
+        "pk": 876969,
+        "fields": {
+            "title": "어쎄신 클럽",
+            "release_date": "2023-02-24",
+            "popularity": 612.978,
+            "vote_count": 49,
+            "vote_average": 6.7,
+            "overview": "오랫동안 킬러 생활을 하면서 무의미한 삶을 살던 모건은 소피를 만나면서부터 인간다운 인생을 꿈꾸기 시작한다. 그래서 고민 끝에 킬러 생활을 청산하려고 하지만, 자신도 모르는 사이에 자신이 누군가 설계한 킬러들의 RPG 게임에 합류했다는 사실을 깨닫는다. 플레이어는 총 7명. 처음에는 영문을 몰라 어리둥절해 하던 킬러들. 하지만 곧 전투본능을 되살려 돈과 목숨을 지키기 위해서 치열한 사투를 벌인다. 그렇게 죽고 죽이는 게임 끝에 마침내 단 두 명의 킬러만이 남는다. 바로 모건과 정체불명의 인물 포크! 포크는 게임 설계자를 찾아 제거하자고 하면서 모건에게 접근하는데... 과연 모건은 최후의 승리자가 되고 킬러들의 세계에서 벗어날 수 있을까?",
+            "poster_path": "/y2d2SBqK33mGOG2CqAYMo3YbWE4.jpg",
+            "youtube_key": "kVhi8WAjJeA"
+        }
+    },
+    {
+        "model": "movies.nowplaying",
+        "pk": 882569,
+        "fields": {
+            "title": "더 커버넌트",
+            "release_date": "2023-04-19",
+            "popularity": 1359.686,
+            "vote_count": 143,
+            "vote_average": 7.7,
+            "overview": "아프가니스탄에서 적들에게 습격을 받아 죽을뻔했던 미 육군 병사가 현지 통역사의 도움과 노력으로 살아나 미국으로 돌아가게 되는데, 그 통역사와 가족은 약속대로 미국으로 오지 못한 사실을 알게 되자, 자신이 직접 그 가족들을 구하기 위해 아프가니스탄으로 향한다.",
+            "poster_path": "/aX0H63vho7rZ9Rm3I567Zf00Z1t.jpg",
+            "youtube_key": "GAjlZOTDV6o"
+        }
+    },
+    {
+        "model": "movies.nowplaying",
+        "pk": 964980,
+        "fields": {
+            "title": "에어",
+            "release_date": "2023-04-05",
+            "popularity": 553.565,
+            "vote_count": 524,
+            "vote_average": 7.5,
+            "overview": "세기의 아이콘을 만든 그들의 실화! 당신이 알고 있는 그 이상의 이야기  1984년, 업계 꼴찌를 벗어나지 못하고 있는 나이키는 브랜드의 간판이 되어 줄 새로운 모델을 찾는다. 나이키의 스카우터 소니 바카로(맷 데이먼)는 NBA의 떠오르는 루키 마이클 조던이 나이키의 미래라고 생각한다. 그런데, 이미 시장을 장악한 컨버스와 아디다스가 그와의 계약을 노리는 상황 나이키 팀은 조던의 마음을 얻기 위한 전략을 세우는데….",
+            "poster_path": "/u72FzpfOZLBkeUdL3o3jyYK9OxU.jpg",
+            "youtube_key": "6SKcCh2XSCg"
+        }
+    },
+    {
+        "model": "movies.nowplaying",
+        "pk": 980078,
+        "fields": {
+            "title": "곰돌이 푸: 피와 꿀",
+            "release_date": "2023-01-27",
+            "popularity": 313.847,
+            "vote_count": 585,
+            "vote_average": 5.7,
+            "overview": "어릴 적 친구로부터 버림받은 곰돌이 ‘푸’와 ‘피글렛’  참을 수 없는 분노와 배신감을 느끼며 잔혹한 복수를 시작한다.",
+            "poster_path": "/fcCbzcEbAEQ5gWzx7EX78qLEVFw.jpg",
+            "youtube_key": "dcpcwARBMJ4"
+        }
+    },
+    {
+        "model": "movies.nowplaying",
+        "pk": 1111140,
+        "fields": {
+            "title": "두 죄인과 노새",
+            "release_date": "2023-04-21",
+            "popularity": 706.121,
+            "vote_count": 13,
+            "vote_average": 5.8,
+            "overview": "이 작품은 자유로운 영혼을 지닌 두 여자가 총상 입은 현상금 사냥꾼을 만나고, 그의 현상금을 나눠 갖기 위해 추적에 동참하는 흥미진진한 서부극이다.",
+            "poster_path": "/icL1zn5z1L5ULIpxkuOLjeUgURY.jpg",
+            "youtube_key": "t0dELzneNIk"
+        }
+    }
+]

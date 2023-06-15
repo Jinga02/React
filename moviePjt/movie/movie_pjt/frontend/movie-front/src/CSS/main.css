@@ -1,0 +1,25 @@
+/* #main {
+  
+} */
+
+#main #window {
+  height: 600px;
+  background-color: gray;
+}
+
+#main #movies {
+  width: 95%;
+  margin: auto;
+}
+
+#main ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#main li {
+  margin-bottom: 20px;
+  list-style: none;
+  margin: 5px;
+}
