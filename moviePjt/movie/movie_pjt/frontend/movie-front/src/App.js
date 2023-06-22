@@ -6,18 +6,22 @@ import Nav from "./component/nav/Nav";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import SearchPage from "./router/SearchPage";
+import { useNavigate } from "react-router";
 
 function App() {
   const [movies, setMovies] = useState([]);
   const API_URL = "http://127.0.0.1:8000";
-
   const getMovies = () => {
     axios({
       method: "GET",
       url: `${API_URL}/movies/`,
-    }).then((response) => {
-      setMovies(response.data.movies);
-    });
+    })
+      .then((response) => {
+        setMovies(response.data.movies);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   useEffect(() => {
@@ -34,7 +38,14 @@ function App() {
 function AppContent({ movies }) {
   const location = useLocation();
   const isHome = location.pathname === "/";
-
+  const user = JSON.parse(localStorage.getItem("user"));
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!user && !isHome) {
+      // Token이 없고 Home 페이지가 아닌 경우 리디렉션 처리
+      navigate("/");
+    }
+  }, [user, isHome, navigate]);
   return (
     <>
       {isHome ? null : <Nav movies={movies} />}

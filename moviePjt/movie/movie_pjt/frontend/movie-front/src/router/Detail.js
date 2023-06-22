@@ -1,23 +1,31 @@
 // import axios from "axios";
-import "../CSS/movie/Detail.css";
+import "../CSS/router/Detail.css";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import CreateReview from "../component/review/CreateReview";
+import ReviewList from "../component/review/ReviewList";
+import YouTube from "../component/movies/Youtube";
 
 export default function Detail() {
   const [movie, setMovie] = useState({});
-
+  // 리뷰리스트 리렌더링용
+  const [update, setUpdate] = useState(0);
   const location = useLocation();
   const movieData = location.state.movieData;
-  const youtube = `https://www.youtube.com/embed/${movie.youtube_key}?autoplay=1&mute=1&amp;playlist=${movie.youtube_key}&loop=1&controls=0&modestbranding=1`;
 
   const getMovie = () => {
     setMovie(movieData);
   };
 
+  // 리뷰리스트 리렌더링용
+  const updateReview = () => {
+    setUpdate((updateReview) => updateReview + 1);
+  };
+
   useEffect(() => {
     getMovie();
   }, []);
-  console.log(movie);
+  // console.log(movie);
   return (
     <div id="Detail">
       <div id="detailMovie">
@@ -29,26 +37,25 @@ export default function Detail() {
           />
         </div>
         <div id="information">
-          <iframe
-            frameborder="0"
-            allowfullscreen
-            // style="width: 100%; height: 400px"
-            src={youtube}
-          ></iframe>
-          <h1>{movie.title}</h1>
-          <h2>개봉일 {movie.release_date}</h2>
-          <h2>
-            평점 : {movie.vote_average} 투표수 : {movie.vote_count}표
-          </h2>
-          <p>{movie.overview}</p>
+          <div id="youtube">
+            <YouTube movie={movie} />
+          </div>
+          <div id="movieInf">
+            <h1>{movie.title}</h1>
+            <h2>개봉일 {movie.release_date}</h2>
+            <h2>
+              평점 : {movie.vote_average} 투표수 : {movie.vote_count}표
+            </h2>
+            <p>{movie.overview}</p>
+          </div>
         </div>
       </div>
       <div id="review">
         <div id="create">
-          <h1>review부분 입니다</h1>
+          <CreateReview movie={movie} updateReview={updateReview} />
         </div>
         <div id="list">
-          <h1>list부분입니다</h1>
+          <ReviewList movie={movie} key={update} />
         </div>
       </div>
     </div>

@@ -1,14 +1,46 @@
-#Movies {
-  width: 400px;
-  height: 500px;
+#main {
+  margin: 70px;
+  color: white;
+}
+#main #nowMovie {
+  margin: 70px 30px;
+}
+#main #popluarMovie {
+  margin: 70px 30px;
+}
+#main #recommendGenre {
+  margin: 70px 30px;
+}
+#main #animation {
+  margin: 70px 30px;
 }
 
-#moviePoster {
-  width: 400px;
-  height: 500px;
+#swiper {
+  height: 400px;
+}
+#swiper li {
+  width: 300px;
+  height: 400px;
 }
 
-#MoviesInf {
-  width: 400px;
-  height: 500px;
+#swiper #poster {
+  width: 300px;
+  height: 100%;
+}
+#swiper img {
+  width: 300px;
+  height: 100%;
+}
+
+#swiper #inf {
+  width: 300px;
+  height: 100%;
+  color: white;
+  overflow-y: auto;
+}
+
+#swiper #inf button {
+  color: white;
+  border: 1px solid white;
+  margin-top: -10px;
 }

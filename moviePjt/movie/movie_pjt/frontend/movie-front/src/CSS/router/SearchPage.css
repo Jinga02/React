@@ -1,0 +1,28 @@
+#main {
+  /* margin: 70px; */
+}
+
+#main ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#main #movieLi {
+  width: 300px;
+  height: 400px;
+  margin: 30px;
+}
+
+#main #movieLi #inf {
+  width: 100%;
+  height: 100%;
+}
+
+#main #movieLi #inf button {
+  color: white;
+}
+
+#main #movieLi #poster {
+  width: 100%;
+  height: 100%;
+}

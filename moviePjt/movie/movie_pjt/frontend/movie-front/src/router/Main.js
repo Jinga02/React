@@ -1,59 +1,39 @@
 // 라이브러리
-import { useState, useEffect } from "react";
-import axios from "axios";
+// import { useState, useEffect } from "react";
+// import axios from "axios";
+// import { Link } from "react-router-dom";
 // 컴포넌트
-import Movies from "../component/movies/Movies";
+import NowMovie from "../component/movies/NowMovie";
+import PopluarMovie from "../component/movies/PopluarMovie";
+import Animation from "../component/movies/Animation";
+import RecommendGenre from "../component/movies/RecommendGenre";
 // 스타일
-import "../CSS/main.css";
+import "../CSS/router/main.css";
+// swiper
 
-export default function Main({ movies }) {
-  const [loading, setLoading] = useState(false);
-  const [nowMovies, setNowMovies] = useState([]);
-  const API_URL = "http://127.0.0.1:8000";
-  // const youtube = `https://www.youtube.com/embed/${movie.youtube_key}?autoplay=1&mute=1&amp;playlist=${movie.youtube_key}&loop=1&controls=0&modestbranding=1`;
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
-  const getNowMovies = () => {
-    axios({
-      method: "GET",
-      url: `${API_URL}/movies/now/`,
-    }).then((response) => {
-      setNowMovies(response.data);
-    });
-  };
-
-  const check = () => {
-    if (movies.length > 0) {
-      setLoading(true);
-    }
-  };
-
-  useEffect(() => {
-    check();
-    getNowMovies();
-  }, []);
-
+export default function Main() {
   return (
     <div id="main">
-      <div id="window">
-        <iframe
-          frameborder="0"
-          allowfullscreen
-          // style="width: 100%; height: 400px"
-          src={youtube}
-        ></iframe>
+      <div id="recommendGenre">
+        <h1>사용자 맞춤 추천 영화</h1>
+        <RecommendGenre />
       </div>
-      <div id="movies">
-        {loading ? (
-          <ul>
-            {movies.map((movie) => (
-              <li key={movie.id}>
-                <Movies movie={movie} />
-              </li>
-            ))}
-          </ul>
-        ) : (
-          "Loading...."
-        )}
+      <div id="nowMovie">
+        <h1>현재 상영중 인 영화</h1>
+        <NowMovie />
+      </div>
+      <div id="popluarMovie">
+        <h1>인기 영화</h1>
+        <PopluarMovie />
+      </div>
+      <div id="animation">
+        <h1>애니메이션</h1>
+        <Animation />
       </div>
     </div>
   );

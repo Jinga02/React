@@ -5,7 +5,8 @@ import axios from "axios";
 export default function LoginModal() {
   const [id, setId] = useState("");
   const [pw, setPw] = useState("");
-
+  // const [username, setUsername] = useState("");
+  // const [userId, setUserId] = useState("");
   const onIdHandler = (event) => {
     setId(event.currentTarget.value);
   };
@@ -15,8 +16,8 @@ export default function LoginModal() {
   };
 
   const navigate = useNavigate();
-
   // axios
+
   const onSubmitForm = (event) => {
     event.preventDefault();
     axios({
@@ -28,10 +29,24 @@ export default function LoginModal() {
       },
     })
       .then((response) => {
-        console.log(response);
-        navigate("/main");
-        localStorage.setItem("userToken", response.data.key);
+        const token = response.data.key;
+        axios({
+          method: "GET",
+          url: "http://127.0.0.1:8000/accounts/user/",
+          headers: {
+            Authorization: `Token ${token}`,
+          },
+        }).then((response) => {
+          const username = response.data.username;
+          const userId = response.data.pk;
+          localStorage.setItem(
+            "user",
+            JSON.stringify({ username, userId, token }),
+          );
+          navigate("/main");
+        });
       })
+
       .catch((error) => {
         alert("존재하지 않는 회원정보 입니다.");
         console.log(error); // 에러 처리

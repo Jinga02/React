@@ -1,6 +1,6 @@
-import "../CSS/Home.css";
-import "../CSS/SignUp.css";
-import "../CSS/Login.css";
+import "../CSS/router/Home.css";
+import "../CSS/sign/SignUp.css";
+import "../CSS/sign/Login.css";
 import { useState } from "react";
 import Modal from "react-modal";
 import SignUpModal from "../component/sign/SignUpModal";
@@ -31,9 +31,7 @@ export default function Home() {
   return (
     <div id="Home">
       <h1>Home</h1>
-      <div id="explanation">
-        <p>AppleTv처럼 동영상을 배경으로하고 이 부분에는 블라블라 설명 ~</p>
-      </div>
+      <div id="explanation"></div>
 
       <div>
         <button onClick={openLoginModal}>시작하기</button>

@@ -1,0 +1,101 @@
+#detailMovie {
+  margin: auto;
+  width: 90%;
+  height: 55%;
+  display: flex;
+  color: white;
+}
+
+#detailMovie #poster {
+  width: 25%;
+}
+
+#detailMovie #poster #posterImg {
+  height: 90%;
+  margin-top: 30px;
+}
+
+#poster img {
+  width: 100%;
+}
+
+#detailMovie #information {
+  width: 75%;
+  margin: 30px;
+}
+
+#information #youtube {
+  width: 100%;
+  height: 50%;
+}
+
+#information #movieInf {
+  width: 100%;
+  height: 50%;
+}
+
+/* 리뷰 */
+#review {
+  width: 90%;
+  height: 40%;
+  display: flex;
+  margin: auto;
+  margin-top: 30px;
+  color: white;
+}
+
+/* 리뷰 작성 */
+#review #create {
+  width: 25%;
+}
+
+#review #create #input input {
+  width: 100%;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.139);
+  border: none;
+}
+#review #create #button button {
+  color: white;
+}
+/* 리뷰 리스트 */
+#review #list {
+  width: 75%;
+  margin: 0 30px;
+}
+
+#review #list #reivewLi {
+  background-color: rgba(128, 128, 128, 0.117);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+#review #list #reivewLi button {
+  color: white;
+}
+
+#search-container {
+  position: relative;
+  margin: auto 0;
+  right: 0;
+}
+
+#search-input {
+  padding-right: 30px; /* 아이콘의 크기에 맞게 조정 */
+  margin: auto;
+}
+#search-input::placeholder {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.699);
+}
+#search-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  border: none;
+  padding: 10px; /* 아이콘 주위의 패딩을 조정 */
+}

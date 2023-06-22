@@ -1,15 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { FaSistrix } from "react-icons/fa";
 export default function SearchBar({ movies }) {
-  // 검색창 입력값 담기
   const [search, setSearch] = useState("");
-  // 검색창 입력값 변화 감지
   const onChange = (event) => {
     setSearch(event.currentTarget.value);
   };
   const navigate = useNavigate();
-  // 검색 함수
+
   const SearchMovie = () => {
     const filteredMovies = movies.filter((movie) =>
       movie.title
@@ -25,21 +23,26 @@ export default function SearchBar({ movies }) {
       setSearch("");
     }
   };
-  // KeyPress Enter 함수
+
   const handleOnKeyPress = (event) => {
     if (event.key === "Enter") {
       SearchMovie();
     }
   };
+
   return (
-    <div>
+    <div id="search-container">
+      <div id="search-icon">
+        <FaSistrix />
+      </div>
       <input
-        type="text"
+        id="search-input"
+        type="search"
         value={search}
         onChange={onChange}
         onKeyPress={handleOnKeyPress}
+        placeholder="      검색"
       />
-      <button onClick={SearchMovie}>🔍</button>
     </div>
   );
 }
