@@ -9,6 +9,7 @@ const useInput = <T = any>(initialData: T): [T, (e: any) => void, Dispatch<SetSt
   const handler = useCallback((e) => {
     setValue(e.currentTarget.value);
   }, []);
+  console.log(value);
   // state와 callback를 합쳐서 한번에 반환
   return [value, handler, setValue];
 };

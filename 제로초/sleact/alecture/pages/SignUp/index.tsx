@@ -1,9 +1,14 @@
 import useInput from '@hooks/useInput';
 import { Button, Error, Form, Header, Input, Label, LinkContainer, Success } from '@pages/SignUp/styles';
+import fetcher from '@utils/fetcher';
 import axios from 'axios';
 import React, { useCallback, useState } from 'react';
+import { Redirect } from 'react-router';
+import useSWR from 'swr';
 
 const SignUp = () => {
+  const { data: userData, error, mutate } = useSWR('http://localhost:3095/api/users', fetcher);
+
   // email과 nickname은 중복 / 중복 해결을 위해 useInput hooks 직접 만들기
   const [email, onChangeEmail, setEmail] = useInput('');
   const [nickname, onChangeNickname, setNickname] = useInput('');
@@ -51,15 +56,8 @@ const SignUp = () => {
         // 요청을 여러번 할때 초기값이 이상할 수 있으니
         setSignUpError('');
         setSignUpSuccess(false);
-        axios({
-          method: 'POST',
-          url: 'http://localhost:3095/api/users',
-          data: {
-            email,
-            nickname,
-            password,
-          },
-        })
+        axios
+          .post('http://localhost:3095/api/users', { email, nickname, password })
           .then((response) => {
             console.log(response);
             setSignUpSuccess(true);
@@ -76,6 +74,14 @@ const SignUp = () => {
     // useCallback이 기억해둬라 값들을 언제까지? deps []에 있는 값이 하나라도 바뀔때까지
     [email, nickname, password, passwordCheck],
   );
+
+  if (userData === undefined) {
+    return <div>로딩중...</div>;
+  }
+
+  if (userData) {
+    return <Redirect to="/workspace/channel/" />;
+  }
 
   return (
     <div id="container">
