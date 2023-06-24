@@ -14,7 +14,7 @@ const App = () => {
       <Redirect exact path="/" to="/Login" />
       <Route path="/Login" component={Login}></Route>
       <Route path="/SignUp" component={SignUp}></Route>
-      <Route path="/workspace" component={Workspace}></Route>
+      <Route path="/workspace/:workspace" component={Workspace}></Route>
       {/* <Route path="/workspace/Channel" component={Channel}></Route>
       <Route path="/workspace/dm" component={DirectMessage}></Route> */}
     </Switch>

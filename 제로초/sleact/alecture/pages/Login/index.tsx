@@ -9,7 +9,7 @@ import useSWR from 'swr';
 const LogIn = () => {
   // useSWR('/api/users', fetcher); 로그인후에 데이터를 전해줄 api 첫번째는 주소, 두번째는 fetcher로 주소를 보내주고 fetcher에서 처리함
   // fetcher.js 만들기 싫으면 그냥 2번째 매겨변수에 fetch... 또는 axios..바로 작성해도 됨
-  const { data: userData, error, mutate } = useSWR('http://localhost:3095/api/users', fetcher);
+  const { data: userData, error, mutate } = useSWR('/api/users', fetcher);
 
   const [logInError, setLogInError] = useState(false);
   const [email, onChangeEmail] = useInput('');
@@ -20,7 +20,7 @@ const LogIn = () => {
       setLogInError(false);
       axios
         .post(
-          'http://localhost:3095/api/users/login',
+          '/api/users/login',
           { email, password },
           {
             withCredentials: true,
@@ -43,7 +43,7 @@ const LogIn = () => {
 
   if (!error && userData) {
     console.log('로그인됨', userData);
-    return <Redirect to="/workspace/channel/" />;
+    return <Redirect to="/workspace/sleact/channel/일반" />;
   }
 
   return (

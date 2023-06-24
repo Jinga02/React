@@ -7,7 +7,7 @@ import { Redirect } from 'react-router';
 import useSWR from 'swr';
 
 const SignUp = () => {
-  const { data: userData, error, mutate } = useSWR('http://localhost:3095/api/users', fetcher);
+  const { data: userData, error, mutate } = useSWR('/api/users', fetcher);
 
   // email과 nickname은 중복 / 중복 해결을 위해 useInput hooks 직접 만들기
   const [email, onChangeEmail, setEmail] = useInput('');
@@ -57,7 +57,7 @@ const SignUp = () => {
         setSignUpError('');
         setSignUpSuccess(false);
         axios
-          .post('http://localhost:3095/api/users', { email, nickname, password })
+          .post('/api/users', { email, nickname, password })
           .then((response) => {
             console.log(response);
             setSignUpSuccess(true);
@@ -80,7 +80,7 @@ const SignUp = () => {
   }
 
   if (userData) {
-    return <Redirect to="/workspace/channel/" />;
+    return <Redirect to="/workspace/sleact/channel/일반" />;
   }
 
   return (
