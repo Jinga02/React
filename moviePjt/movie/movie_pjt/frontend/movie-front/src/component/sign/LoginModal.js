@@ -1,23 +1,33 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom"; // 설치한 패키지
-
+import Modal from "react-modal";
+import SignUpModal from "../sign/SignUpModal";
 import axios from "axios";
+import useInput from "../../hooks/useInput";
+import { useState } from "react";
 export default function LoginModal() {
-  const [id, setId] = useState("");
-  const [pw, setPw] = useState("");
-  // const [username, setUsername] = useState("");
-  // const [userId, setUserId] = useState("");
-  const onIdHandler = (event) => {
-    setId(event.currentTarget.value);
-  };
+  // const [id, setId] = useState("");
+  // const [pw, setPw] = useState("");
+  // const onIdHandler = (event) => {
+  //   setId(event.currentTarget.value);
+  // };
+  // const onPwHandler = (event) => {
+  //   setPw(event.currentTarget.value);
+  // };
+  const [id, onChangeId] = useInput("");
+  const [pw, onChangePw] = useInput("");
 
-  const onPwHandler = (event) => {
-    setPw(event.currentTarget.value);
+  const [logInError, setLogInError] = useState(false);
+
+  const [isSignUpOpen, setIsSignUpOpen] = useState(false);
+  const closeSignUpModal = () => {
+    setIsSignUpOpen(false);
+  };
+  const openSignUpModal = () => {
+    setIsSignUpOpen(true);
   };
 
   const navigate = useNavigate();
   // axios
-
   const onSubmitForm = (event) => {
     event.preventDefault();
     axios({
@@ -48,10 +58,11 @@ export default function LoginModal() {
       })
 
       .catch((error) => {
-        alert("존재하지 않는 회원정보 입니다.");
+        // alert("존재하지 않는 회원정보 입니다.");
+        setLogInError(error.response?.status === 400);
         console.log(error); // 에러 처리
-        setId("");
-        setPw("");
+        // setId("");
+        // setPw("");
       });
   };
 
@@ -62,7 +73,7 @@ export default function LoginModal() {
         <form onSubmit={onSubmitForm}>
           <span>
             <label htmlFor="loginId">ID : </label>
-            <input type="text" id="loginId" value={id} onChange={onIdHandler} />
+            <input type="text" id="loginId" value={id} onChange={onChangeId} />
           </span>
           <span>
             <label htmlFor="loginPw"> PW : </label>
@@ -70,15 +81,37 @@ export default function LoginModal() {
               type="password"
               id="loginPw"
               value={pw}
-              onChange={onPwHandler}
+              onChange={onChangePw}
               placeholder="최소 8자 이상"
             />
           </span>
           <div id="loginBnt">
             <button> 로그인</button>
+            <span style={{ display: "flex", fontSize: "18px" }}>
+              <p>아직 회원이 아니신가요? &nbsp;</p>
+              <p
+                style={{ color: "blue", cursor: "pointer" }}
+                onClick={openSignUpModal}
+              >
+                회원가입 하러가기
+              </p>
+            </span>
+            {logInError && (
+              <h4 style={{ color: "red" }}>
+                아이디 또는 비밀번호를 잘못 입력했습니다.<br></br>
+                입력하신 내용을 다시 확인해주세요.
+              </h4>
+            )}
           </div>
         </form>
       </div>
+      {/* 회원가입 모달 */}
+      <Modal id="Modal" isOpen={isSignUpOpen} onRequestClose={closeSignUpModal}>
+        <SignUpModal />
+        <button id="closeModal" onClick={closeSignUpModal}>
+          X
+        </button>
+      </Modal>
     </div>
   );
 }

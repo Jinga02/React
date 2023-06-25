@@ -35,8 +35,9 @@ import { toast } from 'react-toastify';
 import CreateChannelModal from '@components/CreateChannelModal';
 import InviteWorkspaceModal from '@components/InviteWorkspaceModal';
 import InviteChannelModal from '@components/InviteChannelModal';
-import ChannelList from '@components/ChannelList';
+// import ChannelList from '@components/ChannelList';
 import DMList from '@components/DMList';
+import ChannelList from '@components/ChannelList';
 
 // FC타입안에 children이 알아서 들어있음
 // children 안쓸거면 VFC
@@ -138,7 +139,9 @@ const Workspace: VFC = () => {
     [newWorkspace, newUrl],
   );
   // 워크스페이스 사용자 초대
-  const onClickInviteWorkspace = useCallback(() => {}, []);
+  const onClickInviteWorkspace = useCallback(() => {
+    setShowInviteWorkspaceModal(true);
+  }, []);
   // Channel
 
   // 토글
@@ -198,8 +201,8 @@ const Workspace: VFC = () => {
                 <button onClick={onLogout}>로그아웃</button>
               </WorkspaceModal>
             </Menu>
-            {/* <ChannelList {userData} /> */}
-            <DMList userData={userData} />
+            <ChannelList />
+            <DMList />
             {/* {channelData?.map((v) => (
               <div>{v.name}</div>
             ))} */}
@@ -207,8 +210,8 @@ const Workspace: VFC = () => {
         </Channels>
         <Chats>
           <Switch>
-            <Route path="/workspace/:workspace/channel/:channel" component={Channel}></Route>
-            <Route path="/workspace/:workspace/dm/:dm" component={DirectMessage}></Route>
+            <Route path="/workspace/:workspace/channel/:channel" component={Channel} />
+            <Route path="/workspace/:workspace/dm/:id" component={DirectMessage} />
           </Switch>
         </Chats>
       </WorkspaceWrapper>
@@ -234,11 +237,6 @@ const Workspace: VFC = () => {
         show={showInviteWorkspaceModal}
         onCloseModal={onCloseModal}
         setShowInviteWorkspaceModal={setShowInviteWorkspaceModal}
-      />
-      <InviteChannelModal
-        show={showInviteChannelModal}
-        onCloseModal={onCloseModal}
-        setShowInviteChannelModal={setShowInviteChannelModal}
       />
     </div>
   );

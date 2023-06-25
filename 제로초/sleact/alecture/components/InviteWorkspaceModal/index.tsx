@@ -19,10 +19,9 @@ const InviteWorkspaceModal: FC<Props> = ({ show, onCloseModal, setShowInviteWork
   const [newMember, onChangeNewMember, setNewMember] = useInput('');
   const { data: userData } = useSWR<IUser>('/api/users', fetcher);
   const { mutate: revalidateMember } = useSWR<IUser[]>(
-    userData ? `/api/workspaces/${workspace}/members` : null,
+    userData ? `/api/workspaces/${workspace}/channels` : null,
     fetcher,
   );
-
   const onInviteMember = useCallback(
     (e) => {
       e.preventDefault();
