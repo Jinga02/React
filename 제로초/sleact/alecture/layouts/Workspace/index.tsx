@@ -66,11 +66,10 @@ const Workspace: VFC = () => {
   const { data: channelData } = useSWR<IChannel[]>(userData ? `/api/workspaces/${workspace}/channels` : null, fetcher);
 
   // 워크스페이스에 있는 멤버 데이터
-  const { mutate: revalidateMembers } = useSWR<IUser[]>(
+  const { revalidate: revalidateMembers } = useSWR<IUser[]>(
     userData ? `/api/workspaces/${workspace}/members` : null,
     fetcher,
   );
-
   // 로그아웃
   const onLogout = useCallback(() => {
     axios
@@ -181,13 +180,15 @@ const Workspace: VFC = () => {
       </Header>
       <WorkspaceWrapper>
         <Workspaces>
-          {userData?.Workspaces.map((ws) => {
-            return (
-              <Link key={ws.id} to={`/workspace/${123}/channel/일반`}>
-                <WorkspaceButton>{ws.name.slice(0, 1).toUpperCase()}</WorkspaceButton>
-              </Link>
-            );
-          })}
+          {userData &&
+            userData.Workspaces &&
+            userData.Workspaces.map((ws) => {
+              return (
+                <Link key={ws.id} to={`/workspace/${ws.url}/channel/일반`}>
+                  <WorkspaceButton>{ws.name.slice(0, 1).toUpperCase()}</WorkspaceButton>
+                </Link>
+              );
+            })}
           <AddButton onClick={onClickCreateWorkspace}>+</AddButton>
         </Workspaces>
         <Channels>

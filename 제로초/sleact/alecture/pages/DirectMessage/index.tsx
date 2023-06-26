@@ -12,6 +12,7 @@ const DirectMessage = () => {
   if (!userData || !myData) {
     return null;
   }
+  console.log(userData + 123);
   return (
     <Container>
       <Header>

@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import "../../CSS/router/Detail.css";
+import { FaStar } from "react-icons/fa";
 
 export default function ReviewList({ movie }) {
   // 공통
@@ -21,6 +22,9 @@ export default function ReviewList({ movie }) {
       setReviews(response.data);
     });
   };
+  // 별점
+  const [rating, setRating] = useState(0); // 별점 상태
+
   // 리뷰 삭제
   const deleteReview = (id) => {
     axios({
@@ -70,11 +74,24 @@ export default function ReviewList({ movie }) {
     <ul>
       {reviews.map((review) => (
         <li id="reivewLi" key={review.id}>
-          <h2>작성자: {review.user.username}</h2>
-          <h3>평점: {review.rank}</h3>
+          <h3>작성자: {review.user.username}</h3>
+          <h3>
+            평점:{" "}
+            {[...Array(review.rank)].map((star, index) => {
+              return <FaStar size={24} color={"#ffc107"} />;
+            })}
+          </h3>
           {modifiedReviews[review.id] !== undefined ? (
             <div>
-              <input
+              <textarea
+                style={{
+                  width: "20%",
+                  height: "50px",
+                  borderRadius: "10px",
+                  backgroundColor: "rgba(255, 255, 255, 0.139)",
+                  border: "none",
+                  color: "white",
+                }}
                 type="text"
                 value={modifiedReviews[review.id] || review.content}
                 onChange={(e) =>
@@ -88,22 +105,27 @@ export default function ReviewList({ movie }) {
             </div>
           ) : (
             <>
-              <p>내용: {review.content}</p>
-              {username === review.user.username && (
-                <div>
-                  <button
-                    onClick={() =>
-                      setModifiedReviews((prevState) => ({
-                        ...prevState,
-                        [review.id]: review.content,
-                      }))
-                    }
-                  >
-                    수정
-                  </button>
-                  <button onClick={() => deleteReview(review.id)}>삭제</button>
-                </div>
-              )}
+              <p style={{ whiteSpace: "pre-wrap" }}>
+                내용:
+                {username === review.user.username && (
+                  <div>
+                    <button
+                      onClick={() =>
+                        setModifiedReviews((prevState) => ({
+                          ...prevState,
+                          [review.id]: review.content,
+                        }))
+                      }
+                    >
+                      수정
+                    </button>
+                    <button onClick={() => deleteReview(review.id)}>
+                      삭제
+                    </button>
+                  </div>
+                )}
+                <br /> {review.content}
+              </p>
             </>
           )}
         </li>

@@ -1,6 +1,7 @@
 // import EachDM from '@components/EachDM';
 // import useSocket from '@hooks/useSocket';
 import { CollapseButton } from '@components/DMList/styles';
+import EachDM from '@components/EachDM';
 import { IDM, IUser, IUserWithOnline } from '@typings/db';
 import fetcher from '@utils/fetcher';
 import React, { FC, useCallback, useEffect, useState } from 'react';
@@ -82,28 +83,29 @@ const DMList: FC = () => {
           memberData?.map((member) => {
             const isOnline = onlineList.includes(member.id);
             const count = countList[member.id] || 0;
+            return (
+              <NavLink
+                key={member.id}
+                activeClassName="selected"
+                to={`/workapce/${workspace}/dm/${member.id}`}
+                onClick={resetCount(member.id)}
+              >
+                <i
+                  className={`c-icon p-channel_sidebar__presence_icon p-channel_sidebar__presence_icon--dim_enabled c-presence ${
+                    isOnline ? 'c-presence--active c-icon--presence-online' : 'c-icon--presence-offline'
+                  }`}
+                  aria-hidden="true"
+                  data-qa="presence_indicator"
+                  data-qa-presence-self="false"
+                  data-qa-presence-active="false"
+                  data-qa-presence-dnd="false"
+                />
+                <span className={count > 0 ? 'bold' : undefined}>{member.nickname}</span>
+                {member.id === userData?.id && <span> (나)</span>}
+                {count > 0 && <span className="count">{count}</span>}
+              </NavLink>
+            );
 
-            <NavLink
-              key={member.id}
-              activeClassName="selected"
-              to={`/workapce/${workspace}/dm/${member.id}`}
-              onClick={resetCount(member.id)}
-            >
-              ;
-              <i
-                className={`c-icon p-channel_sidebar__presence_icon p-channel_sidebar__presence_icon--dim_enabled c-presence ${
-                  isOnline ? 'c-presence--active c-icon--presence-online' : 'c-icon--presence-offline'
-                }`}
-                aria-hidden="true"
-                data-qa="presence_indicator"
-                data-qa-presence-self="false"
-                data-qa-presence-active="false"
-                data-qa-presence-dnd="false"
-              />
-              ;<span className={count > 0 ? 'bold' : undefined}>{member.nickname}</span>
-              {member.id === userData?.id && <span> (나)</span>}
-              {count > 0 && <span className="count">{count}</span>}
-            </NavLink>;
             // return <EachDM key={member.id} member={member} isOnline={isOnline} />;
           })}
       </div>

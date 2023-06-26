@@ -61,10 +61,10 @@ const LogIn = () => {
           <div>
             <Input type="password" id="password" name="password" value={password} onChange={onChangePassword} />
           </div>
-          {logInError && <Error>이메일과 비밀번호 조합이 일치하지 않습니다.</Error>}
         </Label>
         <Button type="submit">로그인</Button>
       </Form>
+      {logInError && <Error>이메일과 비밀번호 조합이 일치하지 않습니다.</Error>}
       <LinkContainer>
         아직 회원이 아니신가요?&nbsp;
         <a href="/signup">회원가입 하러가기</a>
