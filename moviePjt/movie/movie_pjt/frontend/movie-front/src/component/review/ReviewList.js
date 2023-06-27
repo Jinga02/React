@@ -109,6 +109,9 @@ export default function ReviewList({ movie }) {
                 내용:
                 {username === review.user.username && (
                   <div>
+                    <button onClick={() => deleteReview(review.id)}>
+                      삭제
+                    </button>
                     <button
                       onClick={() =>
                         setModifiedReviews((prevState) => ({
@@ -118,9 +121,6 @@ export default function ReviewList({ movie }) {
                       }
                     >
                       수정
-                    </button>
-                    <button onClick={() => deleteReview(review.id)}>
-                      삭제
                     </button>
                   </div>
                 )}

@@ -87,7 +87,7 @@ const DMList: FC = () => {
               <NavLink
                 key={member.id}
                 activeClassName="selected"
-                to={`/workapce/${workspace}/dm/${member.id}`}
+                to={`/workspace/${workspace}/dm/${member.id}`}
                 onClick={resetCount(member.id)}
               >
                 <i

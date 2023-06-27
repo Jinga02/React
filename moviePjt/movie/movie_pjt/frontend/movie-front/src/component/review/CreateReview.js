@@ -63,16 +63,6 @@ export default function CreateReview({ movie, updateReview }) {
     <>
       <div id="input">
         <h1>Review</h1>
-        <textarea
-          style={{
-            width: "95%",
-            height: "100px",
-          }}
-          type="text"
-          id="createReview"
-          value={review}
-          onChange={onChangeReview}
-        />
         <span>
           {[...Array(5)].map((star, index) => {
             const ratingStar = index + 1;
@@ -96,6 +86,17 @@ export default function CreateReview({ movie, updateReview }) {
             );
           })}
         </span>
+        <textarea
+          style={{
+            width: "95%",
+            height: "100px",
+          }}
+          type="text"
+          id="createReview"
+          value={review}
+          onChange={onChangeReview}
+        />
+
         <div id="button">
           <button onClick={createReview}>작성</button>
         </div>
