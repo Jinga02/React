@@ -1,6 +1,6 @@
 import fetcher from '@utils/fetcher';
 import axios from 'axios';
-import React, { VFC, useCallback, useState } from 'react';
+import React, { VFC, useCallback, useEffect, useState } from 'react';
 import { Redirect, Route, Switch, useParams } from 'react-router';
 import useSWR from 'swr';
 
@@ -38,6 +38,7 @@ import InviteChannelModal from '@components/InviteChannelModal';
 // import ChannelList from '@components/ChannelList';
 import DMList from '@components/DMList';
 import ChannelList from '@components/ChannelList';
+import useSocket from '@hooks/useSocket';
 
 // FC타입안에 children이 알아서 들어있음
 // children 안쓸거면 VFC
@@ -70,6 +71,23 @@ const Workspace: VFC = () => {
     userData ? `/api/workspaces/${workspace}/members` : null,
     fetcher,
   );
+
+  // socket
+  const [socket, disconnect] = useSocket(workspace);
+
+  useEffect(() => {
+    if (channelData && userData && socket) {
+      socket.emit('Login', { id: userData.id, channels: channelData.map((v) => v.id) });
+    }
+  }, [socket, channelData, userData]);
+
+  // 연결을 끊어줄때
+  useEffect(() => {
+    return () => {
+      disconnect();
+    };
+  }, [workspace, disconnect]);
+
   // 로그아웃
   const onLogout = useCallback(() => {
     axios
