@@ -67,17 +67,14 @@ const Workspace: VFC = () => {
   const { data: channelData } = useSWR<IChannel[]>(userData ? `/api/workspaces/${workspace}/channels` : null, fetcher);
 
   // 워크스페이스에 있는 멤버 데이터
-  const { revalidate: revalidateMembers } = useSWR<IUser[]>(
-    userData ? `/api/workspaces/${workspace}/members` : null,
-    fetcher,
-  );
+  const { data: memberData } = useSWR<IUser[]>(userData ? `/api/workspaces/${workspace}/members` : null, fetcher);
 
   // socket
   const [socket, disconnect] = useSocket(workspace);
 
   useEffect(() => {
     if (channelData && userData && socket) {
-      socket.emit('Login', { id: userData.id, channels: channelData.map((v) => v.id) });
+      socket.emit('login', { id: userData.id, channels: channelData.map((v) => v.id) });
     }
   }, [socket, channelData, userData]);
 

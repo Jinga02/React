@@ -9,7 +9,7 @@ import useSWR from 'swr';
 const LogIn = () => {
   // useSWR('/api/users', fetcher); 로그인후에 데이터를 전해줄 api 첫번째는 주소, 두번째는 fetcher로 주소를 보내주고 fetcher에서 처리함
   // fetcher.js 만들기 싫으면 그냥 2번째 매겨변수에 fetch... 또는 axios..바로 작성해도 됨
-  const { data: userData, error, mutate } = useSWR('/api/users', fetcher);
+  const { data: userData, error, mutate, revalidate } = useSWR('/api/users', fetcher);
 
   const [logInError, setLogInError] = useState(false);
   const [email, onChangeEmail] = useInput('');
@@ -27,7 +27,8 @@ const LogIn = () => {
           },
         )
         .then((response) => {
-          mutate(response.data, false);
+          revalidate();
+          // mutate(response.data, false);
         })
         .catch((error) => {
           console.dir(error);
