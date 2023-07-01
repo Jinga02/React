@@ -10,7 +10,7 @@ import { useParams } from 'react-router';
 import gravatar from 'gravatar';
 
 interface Props {
-  chat: string;
+  chat?: string;
   onSubmitForm: (e: any) => void;
   onChangeChat: (e: any) => void;
   placeholder?: string;
@@ -28,7 +28,6 @@ const ChatBox: VFC<Props> = ({ chat, onSubmitForm, onChangeChat, placeholder }) 
   });
   const { data: memberData } = useSWR<IUser[]>(userData ? `/api/workspaces/${workspace}/members` : null, fetcher);
 
-  // const onSubmitForm = useCallback(() => {}, []);
   const textareaRef = useRef(null);
   useEffect(() => {
     if (textareaRef.current) {

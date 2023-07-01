@@ -4,6 +4,7 @@ import ChatList from '@components/ChatList';
 // import InviteChannelModal from '@components/InviteChannelModal';
 import useInput from '@hooks/useInput';
 import { Container, Header } from '@pages/Channel/styles';
+import makeSection from '@utils/makeSection';
 import React, { useCallback, useState } from 'react';
 // Workspace로 감싸면 안의 div태그가 Workspace.tsx의 children이 됨
 // 다른 JSX안에 넣으면 그 JSX의 children이 된다.
@@ -22,6 +23,8 @@ const Channel = () => {
     e.preventDefault();
     setChat('');
   }, []);
+  // const chatSections = makeSection(chatData ? ([] as IChat[]).concat(...chatData).reverse() : []);
+
   return (
     // <Workspace>
     // <div>Channel!</div>
@@ -43,13 +46,13 @@ const Channel = () => {
           </button>
         </div> */}
       </Header>
-      <ChatList
-      // scrollbarRef={scrollbarRef}
-      // isReachingEnd={isReachingEnd}
-      // isEmpty={isEmpty}
-      // chatSections={chatSections}
-      // setSize={setSize}
-      />
+      {/* <ChatList
+        scrollbarRef={scrollbarRef}
+        isReachingEnd={isReachingEnd}
+        isEmpty={isEmpty}
+        chatSections={chatSections}
+        setSize={setSize}
+      /> */}
       <ChatBox
         onSubmitForm={onSubmitForm}
         chat={chat}
