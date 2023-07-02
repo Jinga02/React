@@ -1,9 +1,9 @@
 import dayjs from 'dayjs';
-import { IDM } from '@typings/db';
+import { IDM, IChat } from '@typings/db';
 
 // chatList받아서 그룹화
-export default function makeSection(chatList: IDM[]) {
-  const sections: { [key: string]: IDM[] } = {};
+export default function makeSection(chatList: (IDM | IChat)[]) {
+  const sections: { [key: string]: (IDM | IChat)[] } = {};
   chatList.forEach((chat) => {
     const monthDate = dayjs(chat.createdAt).format('YYYY-MM-DD');
     if (Array.isArray(sections[monthDate])) {

@@ -1,4 +1,4 @@
-import { IDM } from '@typings/db';
+import { IDM, IChat } from '@typings/db';
 import React, { VFC, memo, useMemo } from 'react';
 import { ChatWrapper } from './styles';
 import gravatar from 'gravatar';
@@ -6,10 +6,11 @@ import dayjs from 'dayjs';
 import regexifyString from 'regexify-string';
 import { Link, useParams } from 'react-router-dom';
 interface Props {
-  data: IDM;
+  data: IDM | IChat;
 }
 const Chat: VFC<Props> = ({ data }) => {
-  const user = data.Sender;
+  // Sender이 데이터에 없으면 채널에서만 보낸거
+  const user = 'Sender' in data ? data.Sender : data.User;
   const { workspace } = useParams<{ workspace: string; channel: string }>();
 
   // 정규표현식 문법 @[진가네도련님](3)
