@@ -3,6 +3,7 @@ import Home from "./router/Home";
 import Main from "./router/Main";
 import Detail from "./router/Detail";
 import Nav from "./component/nav/Nav";
+import Profile from "./router/Profile";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import SearchPage from "./router/SearchPage";
@@ -53,7 +54,8 @@ function AppContent({ movies }) {
         <Route path="/" element={<Home />} />
         <Route path="/main" element={<Main movies={movies} />} />
         <Route path="/main/:id" element={<Detail />} />
-        <Route path="/SearchPage" element={<SearchPage />} />
+        <Route path="/main/SearchPage" element={<SearchPage />} />
+        <Route path="/profile" element={<Profile />}></Route>
       </Routes>
     </>
   );

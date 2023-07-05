@@ -38,7 +38,7 @@ const NowMovie = () => {
     <Swiper
       modules={[Navigation, Pagination]}
       spaceBetween={50}
-      slidesPerView={5}
+      slidesPerView="5"
       navigation
       autoplay={{ delay: 3000, disableOnInteraction: false }}
       pagination={{ clickable: true }}

@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import SignUpModal from "../sign/SignUpModal";
 import axios from "axios";
 import useInput from "../../hooks/useInput";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 export default function LoginModal() {
   // const [id, setId] = useState("");
   // const [pw, setPw] = useState("");
@@ -16,8 +16,10 @@ export default function LoginModal() {
   const [id, onChangeId] = useInput("");
   const [pw, onChangePw] = useInput("");
 
+  // 로그인 실패
   const [logInError, setLogInError] = useState(false);
 
+  // 회원이 아닌 사람 회원 가입으로
   const [isSignUpOpen, setIsSignUpOpen] = useState(false);
   const closeSignUpModal = () => {
     setIsSignUpOpen(false);
@@ -28,43 +30,43 @@ export default function LoginModal() {
 
   const navigate = useNavigate();
   // axios
-  const onSubmitForm = (event) => {
-    event.preventDefault();
-    axios({
-      method: "POST",
-      url: "http://127.0.0.1:8000/accounts/login/",
-      data: {
-        username: id,
-        password: pw,
-      },
-    })
-      .then((response) => {
-        const token = response.data.key;
-        axios({
-          method: "GET",
-          url: "http://127.0.0.1:8000/accounts/user/",
-          headers: {
-            Authorization: `Token ${token}`,
-          },
-        }).then((response) => {
-          const username = response.data.username;
-          const userId = response.data.pk;
-          localStorage.setItem(
-            "user",
-            JSON.stringify({ username, userId, token }),
-          );
-          navigate("/main");
-        });
+  const onSubmitForm = useCallback(
+    (event) => {
+      event.preventDefault();
+      axios({
+        method: "POST",
+        url: "http://127.0.0.1:8000/accounts/login/",
+        data: {
+          username: id,
+          password: pw,
+        },
       })
+        .then((response) => {
+          const token = response.data.key;
+          axios({
+            method: "GET",
+            url: "http://127.0.0.1:8000/accounts/user/",
+            headers: {
+              Authorization: `Token ${token}`,
+            },
+          }).then((response) => {
+            const username = response.data.username;
+            const userId = response.data.pk;
+            localStorage.setItem(
+              "user",
+              JSON.stringify({ username, userId, token }),
+            );
+            navigate("/main");
+          });
+        })
 
-      .catch((error) => {
-        // alert("존재하지 않는 회원정보 입니다.");
-        setLogInError(error.response?.status === 400);
-        console.log(error); // 에러 처리
-        // setId("");
-        // setPw("");
-      });
-  };
+        .catch((error) => {
+          setLogInError(error.response?.status === 400);
+          console.log(error); // 에러 처리
+        });
+    },
+    [id, pw],
+  );
 
   return (
     <div id="loginModal">

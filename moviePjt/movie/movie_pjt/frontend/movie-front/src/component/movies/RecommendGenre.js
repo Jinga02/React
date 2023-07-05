@@ -43,7 +43,7 @@ const RecommendGenre = () => {
       spaceBetween={50}
       slidesPerView={5}
       navigation
-      autoplay={{ delay: 1000 }}
+      autoplay={{ delay: 3000, disableOnInteraction: false }}
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
     >

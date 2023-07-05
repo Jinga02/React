@@ -32,7 +32,9 @@ export default function Nav({ movies }) {
           <li>
             <FaUserCircle size={25} />
           </li>
-          <li>{view && user.username}</li>
+          <li>
+            <Link to="/profile">{view && user.username}</Link>
+          </li>
           <li>{view && <LogOut />}</li>
         </ul>
       </div>
