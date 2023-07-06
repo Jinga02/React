@@ -1,22 +1,23 @@
 // import axios from "axios";
 import "../CSS/router/Detail.css";
 import { useState, useEffect, useCallback } from "react";
-import { useLocation } from "react-router-dom";
+import { useLinkClickHandler, useLocation } from "react-router-dom";
 import CreateReview from "../component/review/CreateReview";
 import ReviewList from "../component/review/ReviewList";
 import YouTube from "../component/movies/Youtube";
 import axios from "axios";
-
+import useSWR from "swr";
+import fetcher from "../utils/fetcher";
 export default function Detail() {
   const token = JSON.parse(localStorage.getItem("user")).token;
+  const userId = JSON.parse(localStorage.getItem("user")).userId;
+  // const { data: userData } = useSWR('/api/users', fetcher)
   const [movie, setMovie] = useState({});
-  // 리뷰리스트 리렌더링용
   const [update, setUpdate] = useState(0);
   const location = useLocation();
   const movieData = location.state.movieData;
   // 좋아요
   const [like, setLike] = useState(false);
-
   const likeMovie = useCallback(() => {
     axios
       .post(
@@ -26,13 +27,37 @@ export default function Detail() {
           headers: {
             Authorization: `Token ${token}`,
           },
-        },
+        }
       )
       .then(() => {
         setLike(!like);
       })
       .catch((error) => {
         console.log(error);
+      });
+  });
+  // 좋아요 영화 가져오기);
+  const getLikeMovie = useCallback(() => {
+    axios({
+      method: "get",
+      url: `http://127.0.0.1:8000/movies/${userId}/liked_movies/`,
+      headers: {
+        Authorization: `Token ${token}`,
+      },
+    })
+      .then((res) => {
+        const movieLike = res.data.filter((thisMovie) => {
+          return thisMovie.id == movieData.id;
+        });
+        const movieLikesId = movieLike[0].id;
+        if (movieLikesId == movie.id) {
+          setLike(false);
+        } else {
+          setLike(true);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
       });
   });
 
@@ -46,8 +71,9 @@ export default function Detail() {
 
   useEffect(() => {
     getMovie();
+    getLikeMovie();
   }, []);
-  // console.log(movie);
+
   return (
     <div id="Detail">
       <div id="detailMovie">
@@ -66,13 +92,13 @@ export default function Detail() {
             <h1>{movie.title}</h1>
             {like ? (
               <i
-                class="fa fa-heart"
+                className="fa fa-heart"
                 style={{ fontSize: "2em", cursor: "pointer" }}
                 onClick={likeMovie}
               />
             ) : (
               <i
-                class="fa fa-heart-o"
+                className="fa fa-heart-o"
                 style={{ fontSize: "2em", cursor: "pointer" }}
                 onClick={likeMovie}
               />

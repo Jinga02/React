@@ -4,7 +4,12 @@ import axios from "axios";
 // 리턴하는 데이터가 data: userData 이거임
 // 에러가 error에 담김
 //
-const fetcher = (url) =>
-  axios.get(url, { withCredentials: true }).then((response) => response.data);
+const fetcher = (url, token) =>
+  axios.get(url, {
+    withCredentials: true,
+    headers: {
+      Authorization: `Token ${token}`,
+    },
+  }).then((response) => response.data);
 
 export default fetcher;

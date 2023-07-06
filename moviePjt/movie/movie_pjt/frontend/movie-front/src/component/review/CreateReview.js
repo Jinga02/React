@@ -27,7 +27,7 @@ export default function CreateReview({ movie, updateReview }) {
 
       // 현재 유저가 이미 리뷰를 작성했는지 확인한다.
       const hasWrittenReview = reviews.some(
-        (review) => review.user.id === userId,
+        (review) => review.user.id === userId
       );
 
       if (hasWrittenReview) {
@@ -47,7 +47,7 @@ export default function CreateReview({ movie, updateReview }) {
             rank: star,
           },
         })
-          .then((response) => {
+          .then(() => {
             updateReview();
             setReview("");
             setStar(0);
@@ -58,7 +58,7 @@ export default function CreateReview({ movie, updateReview }) {
       }
     });
   };
-
+  console.log(star);
   return (
     <>
       <div id="input">
@@ -67,18 +67,24 @@ export default function CreateReview({ movie, updateReview }) {
           {[...Array(5)].map((star, index) => {
             const ratingStar = index + 1;
             return (
-              <label value="star">
+              <label value="star" key={index}>
                 <input
                   type="radio"
                   style={{
                     display: "none",
                   }}
                   value={ratingStar}
-                  onClick={() => setStar(ratingStar)}
+                  onClick={() => {
+                    setStar(ratingStar);
+                  }}
                 />
                 <FaStar
                   size={24}
-                  color={ratingStar <= (hover || star) ? "#ffc107" : "#e4e5e9"}
+                  color={
+                    ratingStar <= (hover !== null ? hover : star)
+                      ? "#ffc107"
+                      : "#e4e5e9"
+                  }
                   onMouseEnter={() => setHover(ratingStar)}
                   onMouseLeave={() => setHover(null)}
                 />

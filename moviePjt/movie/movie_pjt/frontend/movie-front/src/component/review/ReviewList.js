@@ -23,6 +23,9 @@ export default function ReviewList({ movie }) {
     });
   };
   // 별점
+  const [star, setStar] = useState(0);
+  const [hover, setHover] = useState(null);
+
   const [rating, setRating] = useState(0); // 별점 상태
 
   // 리뷰 삭제
@@ -53,7 +56,7 @@ export default function ReviewList({ movie }) {
       data: {
         user: userId,
         content: modifiedReviews[review.id] || review.content,
-        rank: 5,
+        rank: star,
       },
     }).then(() => {
       setModifiedReviews((prevState) => ({
@@ -75,36 +78,66 @@ export default function ReviewList({ movie }) {
       {reviews.map((review) => (
         <li id="reivewLi" key={review.id}>
           <h3>작성자: {review.user.username}</h3>
-          <h3>
-            평점:{" "}
-            {[...Array(review.rank)].map((star, index) => {
-              return <FaStar size={24} color={"#ffc107"} />;
-            })}
-          </h3>
           {modifiedReviews[review.id] !== undefined ? (
             <div>
-              <textarea
-                style={{
-                  width: "20%",
-                  height: "50px",
-                  borderRadius: "10px",
-                  backgroundColor: "rgba(255, 255, 255, 0.139)",
-                  border: "none",
-                  color: "white",
-                }}
-                type="text"
-                value={modifiedReviews[review.id] || review.content}
-                onChange={(e) =>
-                  setModifiedReviews((prevState) => ({
-                    ...prevState,
-                    [review.id]: e.target.value,
-                  }))
-                }
-              />
-              <button onClick={() => modifyReview(review)}>수정</button>
+              <span>
+                {[...Array(5)].map((star, index) => {
+                  const ratingStar = index + 1;
+                  return (
+                    <label value="star" key={index}>
+                      <input
+                        type="radio"
+                        style={{
+                          display: "none",
+                        }}
+                        value={ratingStar}
+                        onClick={() => setStar(ratingStar)}
+                      />
+                      <FaStar
+                        size={24}
+                        color={
+                          ratingStar <= (hover !== null ? hover : star)
+                            ? "#ffc107"
+                            : "#e4e5e9"
+                        }
+                        // color={ratingStar <= (hover !== null ? hover : star) ? "#ffc107" : "#e4e5e9"}
+                        onMouseEnter={() => setHover(ratingStar)}
+                        onMouseLeave={() => setHover(null)}
+                      />
+                    </label>
+                  );
+                })}
+              </span>
+              <div>
+                <textarea
+                  style={{
+                    width: "20%",
+                    height: "50px",
+                    borderRadius: "10px",
+                    backgroundColor: "rgba(255, 255, 255, 0.139)",
+                    border: "none",
+                    color: "white",
+                  }}
+                  type="text"
+                  value={modifiedReviews[review.id] || review.content}
+                  onChange={(e) =>
+                    setModifiedReviews((prevState) => ({
+                      ...prevState,
+                      [review.id]: e.target.value,
+                    }))
+                  }
+                />
+                <button onClick={() => modifyReview(review)}>수정 </button>
+              </div>
             </div>
           ) : (
             <>
+              <h3>
+                평점:{" "}
+                {[...Array(review.rank)].map((star, index) => {
+                  return <FaStar size={24} color={"#ffc107"} />;
+                })}
+              </h3>
               <p style={{ whiteSpace: "pre-wrap" }}>
                 내용:
                 {username === review.user.username && (

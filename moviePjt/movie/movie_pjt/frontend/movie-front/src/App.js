@@ -54,7 +54,7 @@ function AppContent({ movies }) {
         <Route path="/" element={<Home />} />
         <Route path="/main" element={<Main movies={movies} />} />
         <Route path="/main/:id" element={<Detail />} />
-        <Route path="/main/SearchPage" element={<SearchPage />} />
+        <Route path="/SearchPage" element={<SearchPage />} />
         <Route path="/profile" element={<Profile />}></Route>
       </Routes>
     </>
