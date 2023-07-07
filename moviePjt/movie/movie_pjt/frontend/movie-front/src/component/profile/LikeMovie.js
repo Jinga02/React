@@ -1,11 +1,33 @@
 import axios from "axios";
 import { useCallback, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const LikeMovie = () => {
+  const API_URL = "http://127.0.0.1:8000";
+  // 로그인 유저
   const user = JSON.parse(localStorage.getItem("user"));
+  // 프로필 유저 id
+  const { id } = useParams();
+  // 프로필 유저 정보
+  const [profileUser, setProfileUser] = useState({});
+  const getUserProfile = () => {
+    axios({
+      method: "GET",
+      url: `${API_URL}/accounts/profile/${id}/`,
+      headers: {
+        Authorization: `Token ${user.token}`,
+      },
+    })
+      .then((res) => {
+        setProfileUser(res.data);
+        // console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   const [likeMovie, setLikeMovie] = useState([]);
 
@@ -22,7 +44,7 @@ const LikeMovie = () => {
   const getLikeMovie = useCallback(() => {
     axios({
       method: "get",
-      url: `http://127.0.0.1:8000/movies/${user.userId}/liked_movies/`,
+      url: `http://127.0.0.1:8000/movies/${id}/liked_movies/`,
       headers: {
         Authorization: `Token ${user.token}`,
       },
@@ -33,10 +55,10 @@ const LikeMovie = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [user.token, user.userId]);
   useEffect(() => {
     getLikeMovie();
-  }, []);
+  }, [getLikeMovie]);
   return (
     <span>
       {likeMovie && likeMovie.length === 0 ? (

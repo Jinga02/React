@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import "../../CSS/router/Detail.css";
 import { FaStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function ReviewList({ movie }) {
   // 공통
@@ -25,8 +26,6 @@ export default function ReviewList({ movie }) {
   // 별점
   const [star, setStar] = useState(0);
   const [hover, setHover] = useState(null);
-
-  const [rating, setRating] = useState(0); // 별점 상태
 
   // 리뷰 삭제
   const deleteReview = (id) => {
@@ -77,7 +76,13 @@ export default function ReviewList({ movie }) {
     <ul>
       {reviews.map((review) => (
         <li id="reivewLi" key={review.id}>
-          <h3>작성자: {review.user.username}</h3>
+          <Link
+            to={`/profile/${review.user.id}`}
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <h3>작성자: {review.user.username}</h3>
+          </Link>
+
           {modifiedReviews[review.id] !== undefined ? (
             <div>
               <span>

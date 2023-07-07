@@ -8,5 +8,5 @@ export default function LogOut() {
     navigate("/");
     window.location.reload(); // 페이지 새로고침
   };
-  return <li onClick={logout}>LogOut</li>;
+  return <p onClick={logout}>LogOut</p>;
 }

@@ -55,7 +55,8 @@ function AppContent({ movies }) {
         <Route path="/main" element={<Main movies={movies} />} />
         <Route path="/main/:id" element={<Detail />} />
         <Route path="/SearchPage" element={<SearchPage />} />
-        <Route path="/profile" element={<Profile />}></Route>
+        <Route path="/profile/:id" element={<Profile />}></Route>
+        {/* element={<Profile userid={user.userId}/>} */}
       </Routes>
     </>
   );

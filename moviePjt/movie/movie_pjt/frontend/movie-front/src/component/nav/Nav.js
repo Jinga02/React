@@ -33,7 +33,12 @@ export default function Nav({ movies }) {
             <FaUserCircle size={25} />
           </li>
           <li>
-            <Link to="/profile">{view && user.username}</Link>
+            <Link
+              to={`/profile/${user.userId}`}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              {view && user.username}
+            </Link>
           </li>
           <li>{view && <LogOut />}</li>
         </ul>
