@@ -27,7 +27,7 @@ export default function CreateReview({ movie, updateReview }) {
 
       // 현재 유저가 이미 리뷰를 작성했는지 확인한다.
       const hasWrittenReview = reviews.some(
-        (review) => review.user.id === userId
+        (review) => review.user.id === userId,
       );
 
       if (hasWrittenReview) {
@@ -58,7 +58,6 @@ export default function CreateReview({ movie, updateReview }) {
       }
     });
   };
-  console.log(star);
   return (
     <>
       <div id="input">

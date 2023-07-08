@@ -27,7 +27,7 @@ const GuestBook = () => {
       });
   };
 
-  // 댓글 달기
+  // 방명록 달기
   const [content, onChangeContent] = useInput("");
   const createGuestBook = useCallback(() => {
     axios({
@@ -43,47 +43,51 @@ const GuestBook = () => {
       },
     })
       .then((res) => {
-        console.log(res.data);
+        getGuestBook();
       })
       .catch((err) => {
         console.log(err);
       });
   });
 
-  //   getGuestBook(context, USERID){
-  //     axios({
-  //       method:'get',
-  //       url: `${API_URL}/comments/profileuser/${USERID}/comments/`,
+  // 방명록 가져오기
+  const [guestBook, setGueskBook] = useState([]);
+  const getGuestBook = useCallback(() => {
+    axios({
+      method: "GET",
+      url: `${API_URL}/comments/profileuser/${user.userId}/comments/`,
 
-  //       headers: {
-  //         Authorization: `Token ${context.state.token.key}`
-  //       },
-  //     })
-  //     .then((res) => {
-  //       context.commit('GET_GUESTBOOKLIST', res.data)
-  //     })
-  //     .catch(err =>{
-  //       console.log(err)
-  //     })
-  //   }
-
-  //   deleteGuestBook(context, {profileId, guestBookId}){
-  //     axios({
-  //       method: 'delete',
-  //       url: `${API_URL}/comments/profileuser/${profileId}/comment/${guestBookId}/`,
-  //       headers: {
-  //         Authorization: `Token ${context.state.token.key}`
-  //       },
-  //     })
-  //     .then(()=>{
-  //     })
-  //     .catch((err)=>{
-  //       console.log(err)
-  //     })
-  //   }
+      headers: {
+        Authorization: `Token ${user.token}`,
+      },
+    })
+      .then((res) => {
+        setGueskBook(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
+  const deleteGuestBook = (guestBookId) => {
+    axios({
+      method: "DELETE",
+      url: `${API_URL}/comments/profileuser/${profileUser.id}/comment/${guestBookId}/`,
+      headers: {
+        Authorization: `Token ${user.token}`,
+      },
+    })
+      .then(() => {
+        getGuestBook();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   useEffect(() => {
     getUserProfile();
+    getGuestBook();
   }, []);
+
   return (
     <div>
       <textarea
@@ -93,6 +97,14 @@ const GuestBook = () => {
         onChange={onChangeContent}
       />
       <button onClick={createGuestBook}>작성</button>
+      <ul>
+        {guestBook.map((guestbook) => (
+          <li key={guestbook.id} style={{ color: "white" }}>
+            {guestbook.content}
+            <button onClick={() => deleteGuestBook(guestbook.id)}>삭제</button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
