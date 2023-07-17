@@ -22,7 +22,7 @@ function Home({ toDos, addToDo }) {
       </form>
       <ul>
         {toDos.map((toDo) => (
-          <ToDo {...toDo} />
+          <ToDo key={toDo.id} {...toDo} />
         ))}
       </ul>
     </>
