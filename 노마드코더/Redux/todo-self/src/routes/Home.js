@@ -4,7 +4,7 @@ import { actionCreators } from "../store";
 import { Link } from "react-router-dom";
 
 // Home 컴포넌트는 Redux store와 연결되어 상태를 읽고 액션을 디스패치할 수 있는 기능을 갖춘 컴포넌트입니다.
-const Home = ({ toDos, addToDo, deleteToDo }) => {
+const Home = ({ toDos, addToDo, deleteToDo, alertOne }) => {
   const [text, setText] = useState("");
 
   // 입력 필드의 값이 변경될 때 호출되는 함수
@@ -43,7 +43,7 @@ const Home = ({ toDos, addToDo, deleteToDo }) => {
 // mapStateToProps 함수는 Redux store의 상태를 컴포넌트의 props로 매핑하는 역할을 합니다.
 // state를 인자로 받아서 해당 컴포넌트에서 필요한 속성을 추출하여 객체로 반환합니다.
 const mapStateToProps = (state) => {
-  return { toDos: state };
+  return { toDos: state.toDos };
 };
 
 // mapDispatchToProps 함수는 액션 디스패치 함수를 컴포넌트의 props로 매핑하는 역할을 합니다.
@@ -52,6 +52,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     addToDo: (text) => dispatch(actionCreators.addToDo(text)), // addToDo 액션 디스패치 함수를 props에 매핑합니다.
     deleteToDo: (id) => dispatch(actionCreators.deleteToDo(id)), // deleteToDo 액션 디스패치 함수를 props에 매핑합니다.
+    alertOne: () => dispatch(actionCreators.alertOne()),
   };
 };
 

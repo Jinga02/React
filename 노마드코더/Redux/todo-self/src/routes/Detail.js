@@ -21,7 +21,7 @@ const Detail = ({ toDos }) => {
 // state를 인자로 받아서 해당 컴포넌트에서 필요한 속성을 추출하여 객체로 반환합니다.
 const mapStateToProps = (state) => {
   return {
-    toDos: state,
+    toDos: state.toDos,
   };
 };
 

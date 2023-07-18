@@ -1,4 +1,4 @@
-import { createStore } from "redux";
+import { combineReducers, createStore } from "redux";
 
 // 액션 타입 정의
 const ADD = "ADD";
@@ -20,7 +20,7 @@ const deleteToDo = (id) => {
 };
 
 // 리듀서 함수
-const reducer = (state = [], action) => {
+const toDoReducer = (state = [], action) => {
   switch (action.type) {
     case ADD:
       // 새로운 할 일을 추가할 때는 기존의 상태 배열에 새로운 할 일 객체를 추가하여 반환합니다.
@@ -34,13 +34,41 @@ const reducer = (state = [], action) => {
   }
 };
 
+const alertOne = () => {
+  return {
+    type: "one",
+  };
+};
+// const userReducer = (state = [1, 2, 3], action) => {
+//   switch (action.type) {
+//     case "one":
+//       alert(state[0]);
+//       return state;
+//     case "two":
+//       alert(state[1]);
+//       return state;
+//     case "three":
+//       alert(state[2]);
+//       return state;
+//     default:
+//       return state;
+//   }
+// };
+
+// 여러 개의 리듀서를 combineReducers 함수로 결합합니다.
+const rootReducer = combineReducers({
+  toDos: toDoReducer,
+  // user: userReducer,
+});
+
 // 스토어 생성
-const store = createStore(reducer);
+const store = createStore(rootReducer);
 
 // 액션 생성자 함수를 하나의 객체로 묶어서 export합니다.
 export const actionCreators = {
   addToDo,
   deleteToDo,
+  alertOne,
 };
 
 export default store;
