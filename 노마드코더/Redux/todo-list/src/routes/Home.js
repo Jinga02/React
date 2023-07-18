@@ -1,18 +1,32 @@
 import React, { useState } from "react";
-import { connect } from "react-redux";
+import { connect, useDispatch, useSelector } from "react-redux";
 import ToDo from "../component/ToDo";
-import { add } from "../store";
+import { add, printName } from "../store";
 
-function Home({ toDos, addToDo }) {
+function Home() {
   const [text, setText] = useState("");
-  function onChange(e) {
+
+  // function mapStateToProps(state) {
+  //   return { toDos: state };
+  // }
+  const toDos = useSelector((state) => state.toDosReducer);
+
+  // function mapDispatchToProps(dispatch) {
+  //   return {
+  //     addToDo: (text) => dispatch(add(text)),
+  //   };
+  // }
+  const dispatch = useDispatch();
+
+  const onChange = (e) => {
     setText(e.target.value);
-  }
-  function onSubmit(e) {
+  };
+  const onSubmit = (e) => {
     e.preventDefault();
-    addToDo(text);
+    dispatch(add(text));
+    dispatch(printName());
     setText("");
-  }
+  };
   return (
     <>
       <h1>To Do</h1>
@@ -28,13 +42,6 @@ function Home({ toDos, addToDo }) {
     </>
   );
 }
+export default Home;
 
-function mapStateToProps(state) {
-  return { toDos: state };
-}
-function mapDispatchToProps(dispatch) {
-  return {
-    addToDo: (text) => dispatch(add(text)),
-  };
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+// export default connect(mapStateToProps, mapDispatchToProps)(Home);
