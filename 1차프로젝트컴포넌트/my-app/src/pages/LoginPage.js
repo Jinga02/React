@@ -18,16 +18,6 @@ const LoginPage = () => {
     width: "200px",
   };
 
-  const handleKakaoLogin = async (response) => {
-    try {
-      // 카카오 로그인 성공 후 처리할 로직을 작성합니다.
-      // response.profile에 사용자 정보가 담겨 있습니다.
-      console.log("카카오 로그인 성공:", response.profile);
-    } catch (error) {
-      console.error("카카오 로그인 실패:", error);
-    }
-  };
-
   return (
     <div style={divStyle}>
       <h1>CRIT</h1>
