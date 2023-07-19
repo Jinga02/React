@@ -1,13 +1,15 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import Thumbnail from "./pages/ThumbnailPage";
-import OurPage from "./pages/OurPage";
+import StartPage from "./pages/StartPage";
+import IntroPage from "./pages/IntroPage";
 import Nav from "./component/nav/Nav";
 import MainPage from "./pages/MainPage";
 import ChallengePage from "./pages/ChallengePage";
-import DetailChallengePage from "./pages/DetaliChallengePage";
-import Login from "./pages/Login";
-import SignUp from "./pages/SignUp";
+import LoginPage from "./pages/LoginPage";
+import SignUpPage from "./pages/SignUpPage";
+import CommunityPage from "./pages/CommunityPage";
+import ProfilePage from "./pages/ProfilePage";
+import KakaoCallback from "./component/user/socialLogin/KaKaoCallback";
 
 function App() {
   return (
@@ -20,20 +22,22 @@ function App() {
 function AppRoutes() {
   const location = useLocation();
 
-  // ThumbnailPage에서는 Nav를 숨김
+  // StartPage Nav를 숨김
   const showNav = location.pathname !== "/";
 
   return (
     <>
       {showNav && <Nav />}
       <Routes>
-        <Route path="/" element={<Thumbnail />} />
-        <Route path="/OurPage" element={<OurPage />} />
+        <Route path="/" element={<StartPage />} />
+        <Route path="/login/oauth2/code/kakao" element={<KakaoCallback />} />
+        <Route path="/IntroPage" element={<IntroPage />} />
         <Route path="/MainPage" element={<MainPage />} />
         <Route path="/ChallengePage" element={<ChallengePage />} />
-        <Route path="/DetailChallengePage" element={<DetailChallengePage />} />
-        <Route path="/SignUp" element={<SignUp />} />
-        <Route path="/Login" element={<Login />} />
+        <Route path="/CommunityPage" element={<CommunityPage />} />
+        <Route path="/SignUpPage" element={<SignUpPage />} />
+        <Route path="/LoginPage" element={<LoginPage />} />
+        <Route path="/ProfilePage" element={<ProfilePage />} />
       </Routes>
     </>
   );

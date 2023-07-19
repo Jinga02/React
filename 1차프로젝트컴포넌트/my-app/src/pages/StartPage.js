@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
-const Thumbnail = () => {
+const StartPage = () => {
   return (
     <>
-      <h1>Thumbnail 입니다.</h1>
+      <h1>StartPage 입니다.</h1>
       <Link to={`/OurPage`}>
         <button>GO✨</button>
       </Link>
@@ -11,4 +11,4 @@ const Thumbnail = () => {
   );
 };
 
-export default Thumbnail;
+export default StartPage;

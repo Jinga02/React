@@ -7,7 +7,7 @@ const Nav = () => {
       <div id="nav">
         <ul>
           <li>
-            <Link to="/OurPage">CRIT</Link>
+            <Link to="/IntroPage">CRIT</Link>
           </li>
           <li>
             <Link to="/MainPage">메인</Link>
@@ -16,17 +16,17 @@ const Nav = () => {
             <Link to="/ChallengePage">챌린지</Link>
           </li>
           <li>
-            <Link to="/DetailChallengePage">커뮤니티</Link>
+            <Link to="/CommunityPage">커뮤니티</Link>
           </li>
         </ul>
       </div>
       <div id="user">
         <ul>
           <li>
-            <Link to="/SignUp">회원가입</Link>
+            <Link to="/SignUpPage">회원가입</Link>
           </li>
           <li>
-            <Link to="/Login">로그인</Link>
+            <Link to="/LoginPage">로그인</Link>
           </li>
         </ul>
       </div>
