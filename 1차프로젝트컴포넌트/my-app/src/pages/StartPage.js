@@ -4,7 +4,7 @@ const StartPage = () => {
   return (
     <>
       <h1>StartPage 입니다.</h1>
-      <Link to={`/OurPage`}>
+      <Link to={`/IntroPage`}>
         <button>GO✨</button>
       </Link>
     </>

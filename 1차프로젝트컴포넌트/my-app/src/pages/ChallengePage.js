@@ -1,6 +1,17 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 
+// import Swiper core and required modules
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+
 const ChallengePage = () => {
   const [isOpen, setIsOpen] = useState(false);
   const openModal = () => {
@@ -9,7 +20,6 @@ const ChallengePage = () => {
   const closeModal = () => {
     setIsOpen(false);
   };
-
   const customModalStyles = {
     content: {
       background: "white",
@@ -33,8 +43,52 @@ const ChallengePage = () => {
 
   return (
     <>
-      <h1>ChallengePage입니다.</h1>
-      <button onClick={openModal}>Challenge만들기</button>
+      <h1>챌린지게시판</h1>
+      <hr />
+      <div id="createChallenge">
+        <button onClick={openModal}>Challenge만들기</button>
+      </div>
+      <div id="myChallenge">
+        <Swiper
+          style={{
+            backgroundColor: "gray",
+            width: "60%",
+            height: "300px",
+            margin: "auto",
+          }}
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log("slide change")}
+        >
+          <SwiperSlide>
+            <h1>나의 챌린지</h1>
+          </SwiperSlide>
+          <SwiperSlide>
+            <h1>나의 챌린지</h1>
+          </SwiperSlide>
+          <SwiperSlide>
+            <h1>나의 챌린지</h1>
+          </SwiperSlide>
+          <SwiperSlide>
+            <h1>나의 챌린지</h1>
+          </SwiperSlide>
+          <SwiperSlide>
+            <h1>나의 챌린지</h1>
+          </SwiperSlide>
+          <SwiperSlide>
+            <h1>나의 챌린지</h1>
+          </SwiperSlide>
+          <SwiperSlide>
+            <h1>나의 챌린지</h1>
+          </SwiperSlide>
+        </Swiper>
+      </div>
+      {/*  모달  */}
       <Modal
         style={customModalStyles}
         isOpen={isOpen}

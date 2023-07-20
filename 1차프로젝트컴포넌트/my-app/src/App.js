@@ -24,7 +24,6 @@ function AppRoutes() {
 
   // StartPage Nav를 숨김
   const showNav = location.pathname !== "/";
-
   return (
     <>
       {showNav && <Nav />}

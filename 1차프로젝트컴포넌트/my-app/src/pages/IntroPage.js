@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import { withRouter, useLocation } from "react-router-dom";
+
 const IntroPage = () => {
   return (
     <>

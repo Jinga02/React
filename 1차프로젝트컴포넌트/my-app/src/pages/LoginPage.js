@@ -1,6 +1,6 @@
 import React from "react";
 import KakaoLogin from "../component/user/socialLogin/KakaoLogin";
-import KakaoCallback from "../component/user/socialLogin/KaKaoCallback";
+import NaverLogin from "../component/user/socialLogin/NaverLogin";
 
 const LoginPage = () => {
   const divStyle = {
@@ -36,7 +36,12 @@ const LoginPage = () => {
         <a href="/SignUpPage">회원가입 하러가기</a>
       </div>
       <div>
-        <KakaoLogin />
+        <div>
+          <NaverLogin />
+        </div>
+        <div>
+          <KakaoLogin />
+        </div>
       </div>
     </div>
   );

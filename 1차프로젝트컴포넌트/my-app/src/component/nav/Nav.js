@@ -1,7 +1,10 @@
+import { useState } from "react";
 import Navstyles from "../../styles/component/nav/Nav.css";
 import { Link } from "react-router-dom";
 
 const Nav = () => {
+  const [token, setToken] = useState("");
+  const getToken = () => {};
   return (
     <nav>
       <div id="nav">
