@@ -1,18 +1,13 @@
+// style
+import ChallengePageStyled from "./../styles/pages/ChallengePageStyled";
+
+// 나머지
 import React, { useState } from "react";
 import Modal from "react-modal";
-
-// import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-
+import MyChallenge from "../component/challenge/MyChallenge";
+import ChallengeBoard from "../component/challenge/ChallengeBoard";
 const ChallengePage = () => {
+  // 챌린지 만들기 모달
   const [isOpen, setIsOpen] = useState(false);
   const openModal = () => {
     setIsOpen(true);
@@ -20,6 +15,7 @@ const ChallengePage = () => {
   const closeModal = () => {
     setIsOpen(false);
   };
+
   const customModalStyles = {
     content: {
       background: "white",
@@ -43,51 +39,13 @@ const ChallengePage = () => {
 
   return (
     <>
-      <h1>챌린지게시판</h1>
+      <h1>챌린지</h1>
       <hr />
-      <div id="createChallenge">
-        <button onClick={openModal}>Challenge만들기</button>
-      </div>
-      <div id="myChallenge">
-        <Swiper
-          style={{
-            backgroundColor: "gray",
-            width: "60%",
-            height: "300px",
-            margin: "auto",
-          }}
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={50}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
-        >
-          <SwiperSlide>
-            <h1>나의 챌린지</h1>
-          </SwiperSlide>
-          <SwiperSlide>
-            <h1>나의 챌린지</h1>
-          </SwiperSlide>
-          <SwiperSlide>
-            <h1>나의 챌린지</h1>
-          </SwiperSlide>
-          <SwiperSlide>
-            <h1>나의 챌린지</h1>
-          </SwiperSlide>
-          <SwiperSlide>
-            <h1>나의 챌린지</h1>
-          </SwiperSlide>
-          <SwiperSlide>
-            <h1>나의 챌린지</h1>
-          </SwiperSlide>
-          <SwiperSlide>
-            <h1>나의 챌린지</h1>
-          </SwiperSlide>
-        </Swiper>
-      </div>
+      <ChallengePageStyled.CreateChallenge>
+        <button onClick={openModal}>챌린지 만들기</button>
+      </ChallengePageStyled.CreateChallenge>
+      <MyChallenge />
+      <ChallengeBoard />
       {/*  모달  */}
       <Modal
         style={customModalStyles}
