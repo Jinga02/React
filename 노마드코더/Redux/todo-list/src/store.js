@@ -50,7 +50,7 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 // });
 
 const toDos = createSlice({
-  name: "toDosReducer", // Slice의 이름을 정의하는 부분
+  name: "toDos", // Slice의 이름을 정의하는 부분
   initialState: [], // 초기 상태를 정의하는 부분
   reducers: {
     add: (state, action) => {

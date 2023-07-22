@@ -1,5 +1,5 @@
 // style
-import ChallengePageStyled from "./../styles/pages/ChallengePageStyled";
+import { CreateChallenge } from "./../styles/pages/ChallengePageStyled";
 
 // 나머지
 import React, { useState } from "react";
@@ -41,9 +41,9 @@ const ChallengePage = () => {
     <>
       <h1>챌린지</h1>
       <hr />
-      <ChallengePageStyled.CreateChallenge>
+      <CreateChallenge>
         <button onClick={openModal}>챌린지 만들기</button>
-      </ChallengePageStyled.CreateChallenge>
+      </CreateChallenge>
       <MyChallenge />
       <ChallengeBoard />
       {/*  모달  */}

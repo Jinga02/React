@@ -1,4 +1,3 @@
-import ChallengePageStyled from "../../styles/pages/ChallengePageStyled";
 // swiper
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,15 +8,21 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 // 나머지
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+
+// 스타일
+import { SwiperStyled } from "../../styles/component/MyChallengeStyled";
 const MyChallenge = () => {
   // 테스트용
   const [overView] = useState(
-    "내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글"
+    "내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글",
   );
+  const location = useLocation();
+
   return (
     <>
-      <ChallengePageStyled.SwiperStyled>
+      <h1>참여중인 챌린지</h1>
+      <SwiperStyled>
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
@@ -83,11 +88,16 @@ const MyChallenge = () => {
             <div id="bot">
               <h2>15/15</h2>
               <button id="enter">입장하기</button>
-              <button id="detail">상세보기</button>
+              <button id="detail">
+                {" "}
+                {location.pathname === "/ChallengePage"
+                  ? "상세보기"
+                  : "참여내역"}
+              </button>
             </div>
           </SwiperSlide>
         </Swiper>
-      </ChallengePageStyled.SwiperStyled>
+      </SwiperStyled>
     </>
   );
 };

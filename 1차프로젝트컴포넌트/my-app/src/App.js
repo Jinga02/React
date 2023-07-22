@@ -7,7 +7,7 @@ import MainPage from "./pages/MainPage";
 import ChallengePage from "./pages/ChallengePage";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
-import CommunityPage from "./pages/CommunityPage";
+import ChallengeCommunityPage from "./pages/ChallengeCommunityPage";
 import ProfilePage from "./pages/ProfilePage";
 import KakaoCallback from "./component/user/socialLogin/KaKaoCallback";
 
@@ -33,7 +33,10 @@ function AppRoutes() {
         <Route path="/IntroPage" element={<IntroPage />} />
         <Route path="/MainPage" element={<MainPage />} />
         <Route path="/ChallengePage" element={<ChallengePage />} />
-        <Route path="/CommunityPage" element={<CommunityPage />} />
+        <Route
+          path="/ChallengeCommunityPage"
+          element={<ChallengeCommunityPage />}
+        />
         <Route path="/SignUpPage" element={<SignUpPage />} />
         <Route path="/LoginPage" element={<LoginPage />} />
         <Route path="/ProfilePage" element={<ProfilePage />} />

@@ -20,7 +20,7 @@ const Nav = () => {
             <Link to="/ChallengePage">챌린지</Link>
           </li>
           <li>
-            <Link to="/CommunityPage">커뮤니티</Link>
+            <Link to="/ChallengeCommunityPage">커뮤니티</Link>
           </li>
         </ul>
       </NavStyled.MenuStyled>
