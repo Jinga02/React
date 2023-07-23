@@ -4,7 +4,7 @@ export const CreateChallenge = styled.div`
   width: 85%;
   display: flex;
   justify-content: flex-end;
-  margin: 40px 0px 60px 0px;
+  margin: 30px 0px -40px 0px;
   button {
     background-color: #ff007a;
     border: none;

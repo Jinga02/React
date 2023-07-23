@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const RootDiv = styled.div``;
 
-export const InputStyled = styled.input`
+export const Input = styled.input`
   background-color: rgba(22, 22, 22, 0.599);
   plactholder: "아니";
   width: 50%;
@@ -12,4 +12,12 @@ export const InputStyled = styled.input`
   padding: 13px;
   margin: 0 auto;
   display: block;
+
+  & + hr {
+    width: 50%;
+    border: none;
+    height: 0.5px;
+    background-color: #ccc;
+    margin: 30px auto;
+  }
 `;
