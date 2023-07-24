@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { NavBar, Menu, User } from "../../styles/Common";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { BiUserCircle } from "react-icons/bi";
+import { NavLink } from "react-router-dom";
+
 const Nav = () => {
   const token = localStorage.getItem("token");
   const nickName = localStorage.getItem("nickName");
@@ -12,37 +14,39 @@ const Nav = () => {
       <Menu>
         <ul>
           <li>
-            <Link to="/IntroPage">CRIT</Link>
+            <NavLink to="/IntroPage">CRIT</NavLink>
           </li>
           <li>
-            <Link to="/MainPage">메인</Link>
+            <NavLink to="/MainPage">메인</NavLink>
           </li>
           <li>
-            <Link to="/ChallengePage">챌린지</Link>
+            <NavLink to="/ChallengePage">챌린지</NavLink>
           </li>
           <li>
-            <Link to="/ChallengeCommunityPage">커뮤니티</Link>
+            <NavLink to="/ChallengeCommunityPage">커뮤니티</NavLink>
           </li>
         </ul>
       </Menu>
       <User>
-        {token ? (
-          <ul
-            onClick={() => {
-              setView(!view);
-            }}
-          >
-            <li>
-              <BiUserCircle size={35} style={{ cursor: "pointer" }} />{" "}
-            </li>
-            <li>
-              <Link to="/">{view && nickName}</Link>
-            </li>
-            <li>{view && nickName}</li>
-          </ul>
-        ) : (
-          <Link to="/LoginPage">로그인</Link>
-        )}
+        <ul
+          onClick={() => {
+            setView(!view);
+          }}
+        >
+          {token ? (
+            <>
+              <li>
+                <BiUserCircle size={35} style={{ cursor: "pointer" }} />{" "}
+              </li>
+              <li>
+                <Link to="/">{view && nickName}</Link>
+              </li>
+              <li>{view && nickName}</li>
+            </>
+          ) : (
+            <Link to="/LoginPage">로그인</Link>
+          )}
+        </ul>
       </User>
     </NavBar>
   );

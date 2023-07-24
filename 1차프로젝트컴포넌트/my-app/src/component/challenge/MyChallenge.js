@@ -23,7 +23,7 @@ import {
 const MyChallenge = () => {
   // 테스트용
   const [overView] = useState(
-    "내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글"
+    "내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글",
   );
 
   const location = useLocation();
@@ -72,7 +72,7 @@ const MyChallenge = () => {
       </h1> */}
       <SwiperStyled
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        // spaceBetween={50}
+        spaceBetween={20} // 슬라이드 사이의 간격을 조정
         slidesPerView={1}
         navigation
         // pagination={{ clickable: true }}

@@ -19,15 +19,14 @@ const MainPage = () => {
       height: "300px",
       border: "0.5px solid white",
       borderRadius: "8px",
-
       margin: "auto",
     },
     overlay: {
       background: "rgba(0, 0, 0, 0.5)",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      zIndex: "999",
+      // display: "flex",
+      // justifyContent: "center",
+      // alignItems: "center",
+      // zIndex: "999",
     },
   };
   return (

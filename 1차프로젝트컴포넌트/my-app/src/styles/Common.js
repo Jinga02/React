@@ -4,10 +4,12 @@ import { createGlobalStyle } from "styled-components";
 //Nav
 export const NavBar = styled.nav`
   display: flex;
-  padding: 10px;
-  justify-content: space-between; /* 오른쪽 끝에 배치 */
-  ${"" /* background-color: black; */}
+  // padding: 10px;
+  justify-content: space-between;
+  background-color: black;
+  font-size: 20px;
 `;
+
 export const Menu = styled.div`
   width: 60%;
 
@@ -21,22 +23,26 @@ export const Menu = styled.div`
     margin: 0px 10%;
     color: white;
   }
+
+  // NavLink 스타일 설정
   ul li a {
     text-decoration: none;
-  }
-  ul li a:link,
-  a:visited,
-  a:active {
     color: white;
   }
-  a:hover {
+
+  ul li a:hover {
     color: #ff007a;
+  }
+
+  // 현재 페이지와 링크가 일치할 때의 스타일
+  ul li a.active {
+    // color: #ff007a;
+    color: gray;
   }
 `;
 
 export const User = styled.div`
   width: 10%;
-  ${"" /* display: flex; */}
   font-size: 20px;
   cursor: pointer;
 
@@ -47,24 +53,13 @@ export const User = styled.div`
   }
   ul li {
     margin: 0px 10%;
-  }
-  ul li a {
     text-decoration: none;
   }
-  ul li a:link,
-  a:visited,
-  a:active {
+  ul a {
+    text-decoration: none;
     color: white;
   }
-  a:hover {
+  ul li a:hover {
     color: #ff007a;
-  }
-`;
-
-export const Font = createGlobalStyle`
-  @import url('https://webfontworld.github.io/pretendard/Pretendard.css');
-
-  body {
-    font-family: 'Pretendard', sans-serif;
   }
 `;

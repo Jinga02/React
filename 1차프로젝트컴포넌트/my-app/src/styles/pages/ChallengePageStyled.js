@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
+import CreateChallengeModal from "../../component/challenge/CreateChallengeModal";
 
 export const CreateChallenge = styled.div`
   width: 85%;
   display: flex;
   justify-content: flex-end;
   margin: 30px 0px -40px 0px;
+
   button {
     background-color: #ff007a;
     border: none;
@@ -25,6 +27,7 @@ export const SwiperStyled = styled(Swiper)`
   width: 50%;
   height: 300px;
   margin: 100px auto;
+  padding: 20px;
   border: 0.5px solid white;
   border-radius: 8px;
   box-shadow: 5px 5px 20px #ff007a;
@@ -40,8 +43,7 @@ export const SwiperStyled = styled(Swiper)`
 `;
 
 export const SwiperSlideStyled = styled(SwiperSlide)`
-  padding: 10px;
-
+  width: 100%;
   h1 {
     position: absolute;
     top: -10px;
@@ -112,7 +114,6 @@ export const Bot = styled.div`
   }
 `;
 
-// ChallengeBoard
 export const Input = styled.input`
   background-color: rgba(22, 22, 22, 0.599);
   color: white;
@@ -131,4 +132,72 @@ export const Input = styled.input`
     background-color: #ccc;
     margin: 30px auto;
   }
+`;
+
+// Modal
+export const CreateChallengeModalStyled = styled.div`
+  position: absolute;
+  h1 {
+    color: white;
+  }
+  // 제목
+  & > input:first-child {
+    position: relative;
+
+    color: white;
+    width: 70%;
+    height: 80px;
+    background: rgba(0, 0, 0, 0);
+    border: 0;
+    border-bottom: 1px solid white;
+    font-size: 35px;
+  }
+  & > input:first-child::placeholder {
+    color: white;
+  }
+`;
+
+export const TextArea = styled.textarea`
+  position: relative;
+
+  background-color: rgb(27, 27, 27);
+  width: 50%;
+  height: 200px;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  &::placeholder {
+    padding: 10px;
+    color: rgb(150, 150, 150);
+  }
+`;
+
+export const SelectChallenge = styled.div`
+  position: relative;
+
+  border: 0.5px solid white;
+  border-radius: 6px;
+  width: 30%;
+  height: 400px;
+  color: white;
+  font-size: 20px;
+
+  li {
+    list-style: none;
+  }
+  input {
+    width: 25px;
+    height: 25px;
+  }
+`;
+
+export const AuthenticationMethod = styled.div`
+  position: relative;
+  border: 0.5px solid white;
+  border-radius: 6px;
+  width: 30%;
+  height: 400px;
+  color: white;
+  font-size: 20px;
 `;

@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 import MyChallenge from "../component/challenge/MyChallenge";
 import ChallengeBoard from "../component/challenge/ChallengeBoard";
+import CreateChallengeModal from "../component/challenge/CreateChallengeModal";
 const ChallengePage = () => {
   // 챌린지 만들기 모달
   const [isOpen, setIsOpen] = useState(false);
@@ -15,16 +16,15 @@ const ChallengePage = () => {
   const closeModal = () => {
     setIsOpen(false);
   };
-
   const customModalStyles = {
     content: {
-      background: "white",
-      border: "1px solid #ccc",
-      borderRadius: "4px",
-      boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
+      backgroundColor: "rgba(22, 22, 22, 1)",
+      border: "0.5px solid white",
+      borderRadius: "6px",
+      boxShadow: "5px 5px 20px #ff007a",
       margin: "auto",
-      maxWidth: "400px",
-      height: "600px",
+      width: "70%",
+      height: "70%",
       padding: "20px",
       color: "black",
     },
@@ -52,8 +52,7 @@ const ChallengePage = () => {
         isOpen={isOpen}
         onRequestClose={closeModal}
       >
-        <h1>Challenge만들기</h1>
-        <button onClick={closeModal}>닫기</button>
+        <CreateChallengeModal />
       </Modal>
     </>
   );
