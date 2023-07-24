@@ -18,13 +18,14 @@ import {
   Top,
   Mid,
   Bot,
-} from "../../styles/component/MyChallengeStyled";
+} from "../../styles//pages//ChallengePageStyled";
 
 const MyChallenge = () => {
   // 테스트용
   const [overView] = useState(
-    "내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글",
+    "내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글"
   );
+
   const location = useLocation();
   const navigate = useNavigate();
   // 상세보기 클릭
@@ -65,7 +66,7 @@ const MyChallenge = () => {
   };
 
   return (
-    <RootDiv>
+    <>
       {/* <h1 style={{ position: "absolute", top: "180px", left: "150px" }}>
         참여중인 챌린지 dㅣ리리이이
       </h1> */}
@@ -255,7 +256,7 @@ const MyChallenge = () => {
         <h1>참여내역</h1>
         <button onClick={closeModal}>닫기</button>
       </Modal>
-    </RootDiv>
+    </>
   );
 };
 

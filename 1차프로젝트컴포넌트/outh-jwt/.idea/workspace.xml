@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="448bf37f-f9d7-4387-aa5b-4587faaa0542" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../my-app.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my-app/src/pages/ChallengeCommunityPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../my-app/src/pages/ChallengeCommunityPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my-app/src/styles/component/ChallengeBoardStyled.js" beforeDir="false" afterPath="$PROJECT_DIR$/../my-app/src/styles/component/ChallengeBoardStyled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/OauthJwt2Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/OauthJwt2Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/common/advice/GlobalAdviceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/common/advice/GlobalAdviceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/common/config/WebClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/common/config/WebClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/common/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/common/config/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/common/exception/BadRequestException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/common/exception/BadRequestException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/common/exception/OAuth2AuthenticationProcessingException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/common/exception/OAuth2AuthenticationProcessingException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/common/exception/ResourceNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/common/exception/ResourceNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/common/exception/response/ErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/common/exception/response/ErrorResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/common/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/common/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/common/security/SecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/common/security/SecurityFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/common/security/SecurityUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/common/security/SecurityUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/dto/GoogleUserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/dto/GoogleUserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/dto/KakaoUserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/dto/KakaoUserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/dto/NaverUserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/dto/NaverUserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/dto/OAuthSignInResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/dto/OAuthSignInResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/dto/SignUpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/dto/SignUpRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/dto/TokenDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/dto/TokenDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/dto/TokenRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/dto/TokenRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/dto/TokenResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/dto/TokenResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/entity/BaseTimeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/entity/BaseTimeEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/entity/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/entity/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/enumType/AuthProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/enumType/AuthProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/enumType/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/enumType/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/service/GoogleRequestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/service/GoogleRequestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/service/KakaoRequestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/service/KakaoRequestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/service/NaverRequestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/service/NaverRequestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/service/RequestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/service/RequestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/util/PasswordUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/java/com/crit/oauthjwt2/util/PasswordUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oauth-jwt2/src/test/java/com/crit/oauthjwt2/OauthJwt2ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth-jwt2/src/test/java/com/crit/oauthjwt2/OauthJwt2ApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2SmNWRxEMuscLzgn2xeVwRvXawW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/git/React/1차프로젝트컴포넌트/oauth-jwt2",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="OuthJwtApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.crit.outhjwt.OuthJwtApplication" />
+      <module name="outh-jwt.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.crit.outhjwt.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.OuthJwtApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="448bf37f-f9d7-4387-aa5b-4587faaa0542" name="Changes" comment="" />
+      <created>1689747827764</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1689747827764</updated>
+    </task>
+    <servers />
+  </component>
+</project>

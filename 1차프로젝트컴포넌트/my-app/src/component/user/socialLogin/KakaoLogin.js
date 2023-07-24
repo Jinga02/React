@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 const KakaoLogin = () => {
   // const CLIENT_ID = process.env.REST_API_KEY;
   // console.log(process.env);
-  const CLIENT_ID = "99f2cfe427d14f3e95d12150008fc89a";
+
+  const CLIENT_ID = "abc570fb116bd926266e60e2e34149bb";
   const REDIRECT_URI = "http://localhost:3000/login/oauth2/code/kakao";
   const kakaoURL = `https://kauth.kakao.com/oauth/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=code`;
   // const kakaoURL = "http://localhost:8080/oauth2/authorization/kakao";

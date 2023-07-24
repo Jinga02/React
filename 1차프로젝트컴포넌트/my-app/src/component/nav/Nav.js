@@ -1,14 +1,11 @@
 import React, { useState } from "react";
-import NavStyled from "../../styles/component/NavStyled";
+import { NavBar, MenuStyled, UserStyled } from "../../styles/Common";
 import { Link } from "react-router-dom";
 
 const Nav = () => {
-  const [token, setToken] = useState("");
-  const getToken = () => {};
-
   return (
-    <NavStyled.NavBody>
-      <NavStyled.MenuStyled>
+    <NavBar>
+      <MenuStyled>
         <ul>
           <li>
             <Link to="/IntroPage">CRIT</Link>
@@ -23,8 +20,8 @@ const Nav = () => {
             <Link to="/ChallengeCommunityPage">커뮤니티</Link>
           </li>
         </ul>
-      </NavStyled.MenuStyled>
-      <NavStyled.UserStyled>
+      </MenuStyled>
+      <UserStyled>
         <ul>
           <li>
             <Link to="/SignUpPage">회원가입</Link>
@@ -33,8 +30,8 @@ const Nav = () => {
             <Link to="/LoginPage">로그인</Link>
           </li>
         </ul>
-      </NavStyled.UserStyled>
-    </NavStyled.NavBody>
+      </UserStyled>
+    </NavBar>
   );
 };
 
