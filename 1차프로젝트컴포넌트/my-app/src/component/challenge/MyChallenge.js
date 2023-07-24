@@ -67,7 +67,7 @@ const MyChallenge = () => {
   return (
     <RootDiv>
       {/* <h1 style={{ position: "absolute", top: "180px", left: "150px" }}>
-        참여중인 챌린지
+        참여중인 챌린지 dㅣ리리이이
       </h1> */}
       <SwiperStyled
         modules={[Navigation, Pagination, Scrollbar, A11y]}
