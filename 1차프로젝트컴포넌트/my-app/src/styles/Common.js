@@ -1,13 +1,16 @@
 import styled from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 //Nav
 export const NavBar = styled.nav`
-  padding: 10px;
   display: flex;
-  background-color: black;
+  padding: 10px;
+  justify-content: space-between; /* 오른쪽 끝에 배치 */
+  ${"" /* background-color: black; */}
 `;
-export const MenuStyled = styled.div`
-  width: 80%;
+export const Menu = styled.div`
+  width: 60%;
+
   ul {
     list-style: none;
     display: flex;
@@ -31,8 +34,11 @@ export const MenuStyled = styled.div`
   }
 `;
 
-export const UserStyled = styled.div`
-  width: 20%;
+export const User = styled.div`
+  width: 10%;
+  ${"" /* display: flex; */}
+  font-size: 20px;
+  cursor: pointer;
 
   ul {
     list-style: none;
@@ -52,5 +58,13 @@ export const UserStyled = styled.div`
   }
   a:hover {
     color: #ff007a;
+  }
+`;
+
+export const Font = createGlobalStyle`
+  @import url('https://webfontworld.github.io/pretendard/Pretendard.css');
+
+  body {
+    font-family: 'Pretendard', sans-serif;
   }
 `;

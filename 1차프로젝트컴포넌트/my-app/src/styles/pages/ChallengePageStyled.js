@@ -27,7 +27,6 @@ export const SwiperStyled = styled(Swiper)`
   margin: 100px auto;
   border: 0.5px solid white;
   border-radius: 8px;
-
   box-shadow: 5px 5px 20px #ff007a;
 
   // .swiper-button-prev,
