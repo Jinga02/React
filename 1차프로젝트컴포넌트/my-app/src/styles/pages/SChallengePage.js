@@ -1,28 +1,28 @@
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
-import CreateChallengeModal from "../../component/challenge/CreateChallengeModal";
 
-export const CreateChallenge = styled.div`
+// ChallengPage
+export const SCreateChallengeWrapper = styled.div`
   width: 85%;
   display: flex;
   justify-content: flex-end;
   margin: 30px 0px -40px 0px;
-
-  button {
-    background-color: #ff007a;
-    border: none;
-    border-radius: 6px;
-    width: 150px;
-    height: 50px;
-    font-weight: bold;
-    font-size: 18px;
-    color: white;
-    cursor: pointer;
-  }
+`;
+export const SCreateChallengeButton = styled.button`
+  background-color: #ff007a;
+  border: none;
+  border-radius: 6px;
+  width: 150px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
 `;
 
 // MyChallenge
-export const SwiperStyled = styled(Swiper)`
+
+export const SSwiper = styled(Swiper)`
   background-color: rgba(22, 22, 22, 0.599);
   width: 50%;
   height: 300px;
@@ -32,27 +32,20 @@ export const SwiperStyled = styled(Swiper)`
   border-radius: 8px;
   box-shadow: 5px 5px 20px #ff007a;
 
-  // .swiper-button-prev,
-  // .swiper-button-next {
-  // }
-
   .swiper-button-next::after,
   .swiper-button-prev::after {
     display: none;
   }
 `;
 
-export const SwiperSlideStyled = styled(SwiperSlide)`
-  width: 100%;
+export const SSwiperSlide = styled(SwiperSlide)`
   h1 {
     position: absolute;
     top: -10px;
   }
 `;
 
-export const Top = styled.div`
-  position: relative;
-
+export const STopWrapper = styled.div`
   h2 {
     position: absolute;
     left: 220px;
@@ -64,7 +57,7 @@ export const Top = styled.div`
   }
 `;
 
-export const Mid = styled.div`
+export const SMidWrapper = styled.div`
   position: relative;
   top: 80px;
 
@@ -78,7 +71,7 @@ export const Mid = styled.div`
   }
 `;
 
-export const Bot = styled.div`
+export const SBotWrapper = styled.div`
   position: relative;
   top: 220px;
 
@@ -113,8 +106,9 @@ export const Bot = styled.div`
     cursor: pointer;
   }
 `;
-
-export const Input = styled.input`
+//  ChallengeBoard
+export const SChallengeBoardWrapper = styled.div``;
+export const SInput = styled.input`
   background-color: rgba(22, 22, 22, 0.599);
   color: white;
   width: 50%;
@@ -134,8 +128,8 @@ export const Input = styled.input`
   }
 `;
 
-// Modal
-export const CreateChallengeModalStyled = styled.div`
+// CreateChallengeModal
+export const SCreateChallengeModal = styled.div`
   position: absolute;
   h1 {
     color: white;
@@ -157,7 +151,7 @@ export const CreateChallengeModalStyled = styled.div`
   }
 `;
 
-export const TextArea = styled.textarea`
+export const STextArea = styled.textarea`
   position: relative;
 
   background-color: rgb(27, 27, 27);
@@ -173,9 +167,8 @@ export const TextArea = styled.textarea`
   }
 `;
 
-export const SelectChallenge = styled.div`
+export const SSelectChallengeWrapper = styled.div`
   position: relative;
-
   border: 0.5px solid white;
   border-radius: 6px;
   width: 30%;
@@ -192,7 +185,7 @@ export const SelectChallenge = styled.div`
   }
 `;
 
-export const AuthenticationMethod = styled.div`
+export const SAuthenticationMethodWrapper = styled.div`
   position: relative;
   border: 0.5px solid white;
   border-radius: 6px;

@@ -7,7 +7,7 @@ import {
   SButtonWrapper,
   SSignUpbutton,
   SCheckButton,
-} from "../../styles/pages/SignUpPageStyle";
+} from "../styles/pages/SSignUpPage";
 const SignUp = () => {
   return (
     <SSignUpWrapper>

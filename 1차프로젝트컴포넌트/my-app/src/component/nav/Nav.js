@@ -1,8 +1,16 @@
 import React, { useState } from "react";
-import { NavBar, Menu, User } from "../../styles/Common";
-import { Link, useLocation } from "react-router-dom";
-import { BiUserCircle } from "react-icons/bi";
-import { NavLink } from "react-router-dom";
+import {
+  SNav,
+  SMenuWrapper,
+  SUserWrapper,
+  SMenuNavLink,
+  SMenuUl,
+  SMenuLi,
+  SUserUl,
+  SUserLi,
+  SUserNavLink,
+} from "../../styles/SCommon";
+import { FaRegUserCircle } from "react-icons/fa";
 
 const Nav = () => {
   const token = localStorage.getItem("token");
@@ -10,45 +18,44 @@ const Nav = () => {
   const [view, setView] = useState(false);
 
   return (
-    <NavBar>
-      <Menu>
-        <ul>
-          <li>
-            <NavLink to="/IntroPage">CRIT</NavLink>
-          </li>
-          <li>
-            <NavLink to="/MainPage">메인</NavLink>
-          </li>
-          <li>
-            <NavLink to="/ChallengePage">챌린지</NavLink>
-          </li>
-          <li>
-            <NavLink to="/ChallengeCommunityPage">커뮤니티</NavLink>
-          </li>
-        </ul>
-      </Menu>
-      <User>
-        <ul
-          onClick={() => {
-            setView(!view);
-          }}
-        >
-          {token ? (
-            <>
-              <li>
-                <BiUserCircle size={35} style={{ cursor: "pointer" }} />{" "}
-              </li>
-              <li>
-                <Link to="/">{view && nickName}</Link>
-              </li>
-              <li>{view && nickName}</li>
-            </>
-          ) : (
-            <Link to="/LoginPage">로그인</Link>
-          )}
-        </ul>
-      </User>
-    </NavBar>
+    <SNav>
+      <SMenuWrapper>
+        <SMenuUl>
+          <SMenuLi>
+            <SMenuNavLink to="/IntroPage">CRIT</SMenuNavLink>
+          </SMenuLi>
+          <SMenuLi>
+            <SMenuNavLink to="/MainPage">메인</SMenuNavLink>
+          </SMenuLi>
+          <SMenuLi>
+            <SMenuNavLink to="/ChallengePage">챌린지</SMenuNavLink>
+          </SMenuLi>
+          <SMenuLi>
+            <SMenuNavLink to="/ChallengeCommunityPage">커뮤니티</SMenuNavLink>
+          </SMenuLi>
+        </SMenuUl>
+      </SMenuWrapper>
+      <SUserWrapper>
+        {token ? (
+          <SUserUl
+            onClick={() => {
+              setView(!view);
+            }}
+          >
+            <SUserLi>
+              <FaRegUserCircle size={35} style={{ cursor: "pointer" }} />{" "}
+            </SUserLi>
+            <SUserLi>
+              <SUserNavLink to="/">{view && <h3>내 정보</h3>}</SUserNavLink>
+            </SUserLi>
+            <SUserLi>{view && <h3>로그아웃</h3>}</SUserLi>
+          </SUserUl>
+        ) : (
+          <SUserNavLink to="/LoginPage">로그인</SUserNavLink>
+        )}
+        {/* </SUserUl> */}
+      </SUserWrapper>
+    </SNav>
   );
 };
 

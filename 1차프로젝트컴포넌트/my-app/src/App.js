@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import StartPage from "./pages/StartPage";
-import IntroPage from "./pages/IntroPage";
+import StartPage from "./pages/start-page";
+import IntroPage from "./pages/intro-page";
 import Nav from "./component/nav/Nav";
-import MainPage from "./pages/MainPage";
-import ChallengePage from "./pages/ChallengePage";
-import LoginPage from "./pages/LoginPage";
-import SignUpPage from "./pages/SignUpPage";
-import ChallengeCommunityPage from "./pages/ChallengeCommunityPage";
-import ProfilePage from "./pages/ProfilePage";
+import MainPage from "./pages/main-page";
+import ChallengePage from "./pages/challenge-page";
+import LoginPage from "./pages/login-page";
+import SignUpPage from "./pages/signup-page";
+import ChallengeCommunityPage from "./pages/challenge-community-page";
+import ProfilePage from "./pages/profile-page";
 import KakaoCallback from "./component/user/socialLogin/KaKaoCallback";
 
 function App() {

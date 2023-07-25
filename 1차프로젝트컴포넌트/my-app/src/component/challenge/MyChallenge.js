@@ -7,23 +7,22 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 // 나머지
 import React, { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Modal from "react-modal";
 
 // 스타일
 import {
-  RootDiv,
-  SwiperStyled,
-  SwiperSlideStyled,
-  Top,
-  Mid,
-  Bot,
-} from "../../styles//pages//ChallengePageStyled";
+  SSwiper,
+  SSwiperSlide,
+  STopWrapper,
+  SMidWrapper,
+  SBotWrapper,
+} from "../../styles/pages/SChallengePage";
 
 const MyChallenge = () => {
   // 테스트용
   const [overView] = useState(
-    "내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글",
+    "내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글내가 참여중인 챌린지 소개글 내가 참여중인 챌린지 소개글"
   );
 
   const location = useLocation();
@@ -67,24 +66,20 @@ const MyChallenge = () => {
 
   return (
     <>
-      {/* <h1 style={{ position: "absolute", top: "180px", left: "150px" }}>
-        참여중인 챌린지 dㅣ리리이이
-      </h1> */}
-      <SwiperStyled
+      <SSwiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={20} // 슬라이드 사이의 간격을 조정
+        spaceBetween={20}
         slidesPerView={1}
         navigation
-        // pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
       >
-        <SwiperSlideStyled>
-          <Top>
+        <SSwiperSlide>
+          <STopWrapper>
             <h1>나의 챌린지</h1>
             <h2>7/11(화) ~ 8/15(화)</h2>
             <h3>현재 3일째 참여 중</h3>
-          </Top>
-          <Mid>
+          </STopWrapper>
+          <SMidWrapper>
             <img
               src="https://github.com/Jinga02/Review/assets/110621233/e8edd4c4-dd18-42d8-904c-4a04c6618018"
               alt="예싱이미지"
@@ -96,23 +91,23 @@ const MyChallenge = () => {
                 overView
               )}
             </p>
-          </Mid>
-          <Bot>
+          </SMidWrapper>
+          <SBotWrapper>
             <h2>15/15</h2>
             <button id="enter">입장하기</button>
             <button id="detail" onClick={detailClick}>
               {" "}
               {location.pathname === "/ChallengePage" ? "상세보기" : "참여내역"}
             </button>{" "}
-          </Bot>
-        </SwiperSlideStyled>
-        <SwiperSlideStyled>
-          <Top>
+          </SBotWrapper>
+        </SSwiperSlide>
+        <SSwiperSlide>
+          <STopWrapper>
             <h1>나의 챌린지</h1>
             <h2>7/11(화) ~ 8/15(화)</h2>
             <h3>현재 3일째 참여 중</h3>
-          </Top>
-          <Mid>
+          </STopWrapper>
+          <SMidWrapper>
             <img
               src="https://github.com/Jinga02/Review/assets/110621233/e8edd4c4-dd18-42d8-904c-4a04c6618018"
               alt="예싱이미지"
@@ -124,23 +119,23 @@ const MyChallenge = () => {
                 overView
               )}
             </p>
-          </Mid>
-          <Bot>
+          </SMidWrapper>
+          <SBotWrapper>
             <h2>15/15</h2>
             <button id="enter">입장하기</button>
             <button id="detail">
               {" "}
               {location.pathname === "/ChallengePage" ? "상세보기" : "참여내역"}
             </button>{" "}
-          </Bot>
-        </SwiperSlideStyled>
-        <SwiperSlideStyled>
-          <Top>
+          </SBotWrapper>
+        </SSwiperSlide>
+        <SSwiperSlide>
+          <STopWrapper>
             <h1>나의 챌린지</h1>
             <h2>7/11(화) ~ 8/15(화)</h2>
             <h3>현재 3일째 참여 중</h3>
-          </Top>
-          <Mid>
+          </STopWrapper>
+          <SMidWrapper>
             <img
               src="https://github.com/Jinga02/Review/assets/110621233/e8edd4c4-dd18-42d8-904c-4a04c6618018"
               alt="예싱이미지"
@@ -152,23 +147,23 @@ const MyChallenge = () => {
                 overView
               )}
             </p>
-          </Mid>
-          <Bot>
+          </SMidWrapper>
+          <SBotWrapper>
             <h2>15/15</h2>
             <button id="enter">입장하기</button>
             <button id="detail">
               {" "}
               {location.pathname === "/ChallengePage" ? "상세보기" : "참여내역"}
             </button>{" "}
-          </Bot>
-        </SwiperSlideStyled>
-        <SwiperSlideStyled>
-          <Top>
+          </SBotWrapper>
+        </SSwiperSlide>
+        <SSwiperSlide>
+          <STopWrapper>
             <h1>나의 챌린지</h1>
             <h2>7/11(화) ~ 8/15(화)</h2>
             <h3>현재 3일째 참여 중</h3>
-          </Top>
-          <Mid>
+          </STopWrapper>
+          <SMidWrapper>
             <img
               src="https://github.com/Jinga02/Review/assets/110621233/e8edd4c4-dd18-42d8-904c-4a04c6618018"
               alt="예싱이미지"
@@ -180,23 +175,23 @@ const MyChallenge = () => {
                 overView
               )}
             </p>
-          </Mid>
-          <Bot>
+          </SMidWrapper>
+          <SBotWrapper>
             <h2>15/15</h2>
             <button id="enter">입장하기</button>
             <button id="detail">
               {" "}
               {location.pathname === "/ChallengePage" ? "상세보기" : "참여내역"}
             </button>{" "}
-          </Bot>
-        </SwiperSlideStyled>
-        <SwiperSlideStyled>
-          <Top>
+          </SBotWrapper>
+        </SSwiperSlide>
+        <SSwiperSlide>
+          <STopWrapper>
             <h1>나의 챌린지</h1>
             <h2>7/11(화) ~ 8/15(화)</h2>
             <h3>현재 3일째 참여 중</h3>
-          </Top>
-          <Mid>
+          </STopWrapper>
+          <SMidWrapper>
             <img
               src="https://github.com/Jinga02/Review/assets/110621233/e8edd4c4-dd18-42d8-904c-4a04c6618018"
               alt="예싱이미지"
@@ -208,23 +203,23 @@ const MyChallenge = () => {
                 overView
               )}
             </p>
-          </Mid>
-          <Bot>
+          </SMidWrapper>
+          <SBotWrapper>
             <h2>15/15</h2>
             <button id="enter">입장하기</button>
             <button id="detail">
               {" "}
               {location.pathname === "/ChallengePage" ? "상세보기" : "참여내역"}
             </button>{" "}
-          </Bot>
-        </SwiperSlideStyled>
-        <SwiperSlideStyled>
-          <Top>
+          </SBotWrapper>
+        </SSwiperSlide>
+        <SSwiperSlide>
+          <STopWrapper>
             <h1>나의 챌린지</h1>
             <h2>7/11(화) ~ 8/15(화)</h2>
             <h3>현재 3일째 참여 중</h3>
-          </Top>
-          <Mid>
+          </STopWrapper>
+          <SMidWrapper>
             <img
               src="https://github.com/Jinga02/Review/assets/110621233/e8edd4c4-dd18-42d8-904c-4a04c6618018"
               alt="예싱이미지"
@@ -236,17 +231,17 @@ const MyChallenge = () => {
                 overView
               )}
             </p>
-          </Mid>
-          <Bot>
+          </SMidWrapper>
+          <SBotWrapper>
             <h2>15/15</h2>
             <button id="enter">입장하기</button>
             <button id="detail">
               {" "}
               {location.pathname === "/ChallengePage" ? "상세보기" : "참여내역"}
             </button>{" "}
-          </Bot>
-        </SwiperSlideStyled>
-      </SwiperStyled>
+          </SBotWrapper>
+        </SSwiperSlide>
+      </SSwiper>
       {/*  모달  */}
       <Modal
         style={customModalStyles}

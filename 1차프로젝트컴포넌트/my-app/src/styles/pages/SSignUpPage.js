@@ -1,32 +1,32 @@
 import styled from "styled-components";
 
-export const Div = styled.div`
+export const SSignUpWrapper = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 `;
 
-export const From = styled.form``;
+export const SForm = styled.form``;
 
-export const Span = styled.span`
+export const SSpan = styled.span`
   display: block;
   margin-bottom: 20px;
 `;
 
-export const Label = styled.label`
+export const SLabel = styled.label`
   display: block;
   margin-bottom: 5px;
 `;
 
-export const Input = styled.input`
+export const SInput = styled.input`
   type: text;
   width: 300px;
   height: 25px;
   border-radius: 5px;
 `;
 
-export const CheckButton = styled.button`
+export const SCheckButton = styled.button`
   background-color: #0000c5;
   color: white;
   border: none;
@@ -37,11 +37,11 @@ export const CheckButton = styled.button`
   cursor: pointer;
 `;
 
-export const ButtonContainer = styled.div`
+export const SButtonWrapper = styled.div`
   text-align: center;
 `;
 
-export const SignUpbutton = styled.button`
+export const SSignUpbutton = styled.button`
   background-color: #33ff00;
   border: none;
   width: 100px;

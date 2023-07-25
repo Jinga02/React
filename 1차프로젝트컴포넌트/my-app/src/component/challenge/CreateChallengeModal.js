@@ -1,10 +1,10 @@
 import { useState } from "react";
 import {
-  CreateChallengeModalStyled,
-  TextArea,
-  SelectChallenge,
-  AuthenticationMethod,
-} from "../../styles/pages/ChallengePageStyled";
+  SCreateChallengeModal,
+  STextArea,
+  SSelectChallengeWrapper,
+  SAuthenticationMethodWrapper,
+} from "../../styles/pages/SChallengePage";
 
 const CreateChallengeModal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,10 +13,10 @@ const CreateChallengeModal = () => {
     setIsOpen(false);
   };
   return (
-    <CreateChallengeModalStyled>
+    <SCreateChallengeModal>
       <input type="text" placeholder="제목을 입력하세요" />
-      <TextArea placeholder="소개글을 작성하세요"></TextArea>
-      <SelectChallenge>
+      <STextArea placeholder="소개글을 작성하세요"></STextArea>
+      <SSelectChallengeWrapper>
         <h3>챌린지 종류</h3>
         <li>
           <label>
@@ -66,10 +66,10 @@ const CreateChallengeModal = () => {
             챌린지
           </label>
         </li>
-      </SelectChallenge>
-      <AuthenticationMethod></AuthenticationMethod>
+      </SSelectChallengeWrapper>
+      <SAuthenticationMethodWrapper></SAuthenticationMethodWrapper>
       <button onClick={closeModal}>나가기</button>
-    </CreateChallengeModalStyled>
+    </SCreateChallengeModal>
   );
 };
 
