@@ -60,6 +60,7 @@ export const SUserNavLink = styled(NavLink)`
   }
 `;
 export const Sfont = styled.div`
+  src: url("./styles/fonts/Pretendard-Medium.woff2") format("woff2");
   font-family: "Pretendard";
   font-style: normal;
   font-weight: 500;
