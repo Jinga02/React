@@ -129,50 +129,46 @@ export const SInput = styled.input`
 `;
 
 // CreateChallengeModal
-export const SCreateChallengeModal = styled.div`
-  position: absolute;
-  h1 {
-    color: white;
-  }
-  // 제목
-  & > input:first-child {
-    position: relative;
-
-    color: white;
-    width: 70%;
-    height: 80px;
-    background: rgba(0, 0, 0, 0);
-    border: 0;
-    border-bottom: 1px solid white;
-    font-size: 35px;
-  }
-  & > input:first-child::placeholder {
+export const SCreateChallengeModalWrapper = styled.div`
+  color: white;
+  margin: 10px 10%;
+`;
+export const STitleInput = styled.input`
+  color: white;
+  width: 100%;
+  height: 80px;
+  background: rgba(0, 0, 0, 0);
+  border: 0;
+  border-bottom: 1px solid white;
+  font-size: 35px;
+  &::placeholder {
     color: white;
   }
 `;
+export const SInfoChallenge = styled.div``;
 
 export const STextArea = styled.textarea`
-  position: relative;
-
   background-color: rgb(27, 27, 27);
-  width: 50%;
-  height: 200px;
+  width: 530px;
+  height: 150px;
   font-size: 18px;
   border: none;
-  border-radius: 6px;
+  border-radius: 10px;
   color: white;
+  margin: 20px 0;
+
   &::placeholder {
-    padding: 10px;
+    padding: 15px 10px;
     color: rgb(150, 150, 150);
   }
 `;
 
 export const SSelectChallengeWrapper = styled.div`
-  position: relative;
+  width: 250px;
+  height: 260px;
+  background-color: rgb(27, 27, 27);
   border: 0.5px solid white;
   border-radius: 6px;
-  width: 30%;
-  height: 400px;
   color: white;
   font-size: 20px;
 
@@ -187,10 +183,21 @@ export const SSelectChallengeWrapper = styled.div`
 
 export const SAuthenticationMethodWrapper = styled.div`
   position: relative;
+  bottom: 261px;
+  left: 280px;
+  width: 250px;
   border: 0.5px solid white;
   border-radius: 6px;
-  width: 30%;
-  height: 400px;
+  color: white;
+  font-size: 20px;
+`;
+export const SMemberWrapper = styled.div`
+  position: relative;
+  bottom: 261px;
+  left: 280px;
+  width: 250px;
+  border: 0.5px solid white;
+  border-radius: 6px;
   color: white;
   font-size: 20px;
 `;

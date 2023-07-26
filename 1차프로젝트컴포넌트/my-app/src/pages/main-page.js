@@ -29,10 +29,27 @@ const MainPage = () => {
                 alt="예싱이미지"
               />
               <h4>챌린지 1</h4>
+              <p>챌린지 짧은 소개</p>
               <SEntranceLiButton>입장하기</SEntranceLiButton>
             </SEntranceLi>
-            {/* <SEntranceLi>니 챌린지2</SEntranceLi>
-            <SEntranceLi>니 챌린지3</SEntranceLi> */}
+            <SEntranceLi>
+              <img
+                src="https://github.com/Jinga02/Review/assets/110621233/e8edd4c4-dd18-42d8-904c-4a04c6618018"
+                alt="예싱이미지"
+              />
+              <h4>챌린지 1</h4>
+              <p>챌린지 짧은 소개</p>
+              <SEntranceLiButton>입장하기</SEntranceLiButton>
+            </SEntranceLi>
+            <SEntranceLi>
+              <img
+                src="https://github.com/Jinga02/Review/assets/110621233/e8edd4c4-dd18-42d8-904c-4a04c6618018"
+                alt="예싱이미지"
+              />
+              <h4>챌린지 1</h4>
+              <p>챌린지 짧은 소개</p>
+              <SEntranceLiButton>입장하기</SEntranceLiButton>
+            </SEntranceLi>
           </SEntranceUl>
         )}
       </SEntranceButtonWrapper>

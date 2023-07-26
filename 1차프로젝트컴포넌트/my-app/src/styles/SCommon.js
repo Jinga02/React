@@ -59,3 +59,9 @@ export const SUserNavLink = styled(NavLink)`
     color: #ff007a;
   }
 `;
+export const Sfont = styled.div`
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 500;
+  font-display: fallback;
+`;

@@ -31,7 +31,7 @@ const Nav = () => {
             <SMenuNavLink to="/ChallengePage">챌린지</SMenuNavLink>
           </SMenuLi>
           <SMenuLi>
-            <SMenuNavLink to="/ChallengeCommunityPage">커뮤니티</SMenuNavLink>
+            <SMenuNavLink to="/CommunityPage">커뮤니티</SMenuNavLink>
           </SMenuLi>
         </SMenuUl>
       </SMenuWrapper>

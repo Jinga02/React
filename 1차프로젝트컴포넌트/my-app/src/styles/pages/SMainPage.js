@@ -21,20 +21,29 @@ export const SEntranceButton = styled.button`
 export const SEntranceUl = styled.ul`
   position: relative;
   background-color: rgba(22, 22, 22, 0.599);
-  width: 300px;
-  left: 78%;
+  width: 400px;
+  left: 72%;
   padding: 0;
 `;
 export const SEntranceLi = styled.li`
-  background-color: red;
+  ${"" /* background-color: red; */}
   display: flex;
   width: 100%;
-  height: 90px;
+  height: 100px;
   list-style: none;
+  border-radius: 8px;
+  padding: 8px;
+  margin: 5px 0;
+  p {
+    position: relative;
+    top: -10px;
+    right: 40px;
+  }
   h4 {
     position: relative;
-    top: 45px;
-    right: 65px;
+    top: 77px;
+    right: 73px;
+    margin: 0;
   }
   img {
     margin: 5px;
@@ -43,10 +52,15 @@ export const SEntranceLi = styled.li`
 `;
 export const SEntranceLiButton = styled.button`
   position: relative;
-  top: 45px;
-  left: 80px;
+  top: 50px;
+  left: 20px;
   width: 25%;
   height: 40%;
+  background-color: #33ff00;
+  border: none;
+  border-radius: 6px;
+  font-weight: 800;
+  cursor: pointer;
 `;
 // 챌스 검색
 export const SSearchShortsWrapper = styled.div`

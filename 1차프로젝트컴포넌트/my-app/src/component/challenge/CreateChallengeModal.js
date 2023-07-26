@@ -1,9 +1,12 @@
 import { useState } from "react";
 import {
-  SCreateChallengeModal,
+  SCreateChallengeModalWrapper,
+  STitleInput,
   STextArea,
+  SInfoChallenge,
   SSelectChallengeWrapper,
   SAuthenticationMethodWrapper,
+  SMemberWrapper,
 } from "../../styles/pages/SChallengePage";
 
 const CreateChallengeModal = () => {
@@ -13,63 +16,51 @@ const CreateChallengeModal = () => {
     setIsOpen(false);
   };
   return (
-    <SCreateChallengeModal>
-      <input type="text" placeholder="제목을 입력하세요" />
-      <STextArea placeholder="소개글을 작성하세요"></STextArea>
-      <SSelectChallengeWrapper>
-        <h3>챌린지 종류</h3>
-        <li>
-          <label>
+    <SCreateChallengeModalWrapper>
+      <STitleInput type="text" placeholder="제목을 입력하세요" />
+      <SInfoChallenge>
+        <STextArea placeholder="소개글을 작성하세요"></STextArea>
+        <SSelectChallengeWrapper>
+          <h3>챌린지 종류</h3>
+          <li>
+            <label>챌린지</label>
             <input type="radio" name="challengeType" />
-            챌린지
-          </label>
-        </li>
-        <li>
-          <label>
+          </li>
+          <li>
+            <label>챌린지</label>
             <input type="radio" name="challengeType" />
-            챌린지
-          </label>
-        </li>
-        <li>
-          <label>
-            <input type="radio" name="challengeType" />
-            챌린지
-          </label>
-        </li>
-        <li>
-          <label>
-            <input type="radio" name="challengeType" />
-            챌린지
-          </label>
-        </li>
-        <li>
-          <label>
-            <input type="radio" name="challengeType" />
-            챌린지
-          </label>
-        </li>
-        <li>
-          <label>
-            <input type="radio" name="challengeType" />
-            챌린지
-          </label>
-        </li>
-        <li>
-          <label>
-            <input type="radio" name="challengeType" />
-            챌린지
-          </label>
-        </li>
-        <li>
-          <label>
-            <input type="radio" name="challengeType" />
-            챌린지
-          </label>
-        </li>
-      </SSelectChallengeWrapper>
-      <SAuthenticationMethodWrapper></SAuthenticationMethodWrapper>
+          </li>
+        </SSelectChallengeWrapper>
+        <SAuthenticationMethodWrapper>
+          <h3>인증수단 설정</h3>
+          <ul>
+            <li>
+              <label>실시간 인증</label>
+              <input type="radio" />
+            </li>
+            <li>
+              <label>실시간 인증</label>
+              <input type="radio" />
+            </li>
+          </ul>
+        </SAuthenticationMethodWrapper>
+        <SMemberWrapper>
+          <h3>인원수 설정</h3>
+          <ul>
+            <li>
+              <label>실시간 인증</label>
+              <input type="radio" />
+            </li>
+            <li>
+              <label>실시간 인증</label>
+              <input type="radio" />
+            </li>
+          </ul>
+        </SMemberWrapper>
+      </SInfoChallenge>
+
       <button onClick={closeModal}>나가기</button>
-    </SCreateChallengeModal>
+    </SCreateChallengeModalWrapper>
   );
 };
 
