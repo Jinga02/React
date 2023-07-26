@@ -30,7 +30,7 @@ const MyChallenge = () => {
   // 상세보기 클릭
   const detailClick = () => {
     if (location.pathname === "/ChallengePage") {
-      navigate("/ChallengeCommunityPage");
+      navigate("/ChallengePage/:id");
     } else {
       openModal();
     }

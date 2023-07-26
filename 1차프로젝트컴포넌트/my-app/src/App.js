@@ -11,7 +11,7 @@ import CommunityPage from "./pages/community-page";
 import ProfilePage from "./pages/profile-page";
 import KakaoCallback from "./component/user/socialLogin/KaKaoCallback";
 import { Sfont } from "./styles/SCommon";
-
+import DetailChallengePage from "./pages/detail-challenge-page";
 function App() {
   return (
     <Sfont>
@@ -36,6 +36,7 @@ function AppRoutes() {
         <Route path="/IntroPage" element={<IntroPage />} />
         <Route path="/MainPage" element={<MainPage />} />
         <Route path="/ChallengePage" element={<ChallengePage />} />
+        <Route path="/ChallengePage/:id" element={<DetailChallengePage />} />
         <Route path="/CommunityPage" element={<CommunityPage />} />
         <Route path="/SignUpPage" element={<SignUpPage />} />
         <Route path="/LoginPage" element={<LoginPage />} />

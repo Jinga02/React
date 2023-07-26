@@ -9,14 +9,11 @@ import SearchShorts from "../component/shorts/SearchShorts";
 import { useState } from "react";
 
 const MainPage = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const openChallenge = () => {
     setIsOpen(!isOpen);
   };
 
-  const closeModal = () => {
-    setIsOpen(false);
-  };
   return (
     <>
       <SEntranceButtonWrapper>
