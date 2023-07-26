@@ -228,10 +228,14 @@ export const SMemberWrapper = styled.div`
     height: 15px;
   }
   h4 {
-    margin: 20px 0;
+    margin: 20px 0 10px 0;
   }
   select {
+    position: relative;
+    left: 180px;
     margin: 8px 0 5px 0;
+    border: none;
+    background-color: rgb(120, 120, 120);
   }
   h5 {
     margin: 0 110px;
