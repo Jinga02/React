@@ -7,23 +7,21 @@ export const SSignUpWrapper = styled.div`
   transform: translate(-50%, -50%);
 `;
 
-export const SForm = styled.form``;
-
-export const SSpan = styled.span`
-  display: block;
-  margin-bottom: 20px;
-`;
-
-export const SLabel = styled.label`
-  display: block;
-  margin-bottom: 5px;
-`;
-
-export const SInput = styled.input`
-  type: text;
-  width: 300px;
-  height: 25px;
-  border-radius: 5px;
+export const SForm = styled.form`
+  span {
+    display: block;
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  input {
+    type: text;
+    width: 300px;
+    height: 35px;
+    border-radius: 5px;
+  }
 `;
 
 export const SCheckButton = styled.button`
@@ -48,4 +46,16 @@ export const SSignUpbutton = styled.button`
   height: 30px;
   border-radius: 5px;
   cursor: pointer;
+  type: submit;
+`;
+
+export const ErrorWrapper = styled.div`
+  color: #e01e5a;
+  margin: 8px 0 16px;
+  font-weight: bold;
+`;
+
+export const SuccessWrapper = styled.div`
+  color: #2eb67d;
+  font-weight: bold;
 `;
