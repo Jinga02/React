@@ -68,6 +68,11 @@ const SignUp = () => {
               title: "회원가입 완료!",
               showConfirmButton: false,
               timer: 1500,
+              // 먼지
+              // imageUrl: 'https://unsplash.it/400/200',
+              // imageWidth: 400,
+              // imageHeight: 200,
+              // imageAlt: 'Custom image',
             });
             nav("/LoginPage");
           })

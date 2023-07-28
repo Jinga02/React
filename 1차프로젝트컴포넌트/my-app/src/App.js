@@ -14,21 +14,15 @@ import PayPage from "./pages/pay-page";
 import KakaoCallback from "./component/user/socialLogin/KaKaoCallback";
 import { Sfont } from "./styles/SCommon";
 import DetailChallengePage from "./pages/detail-challenge-page";
-<<<<<<< HEAD
 import { Provider } from "react-redux";
-=======
-
->>>>>>> 079303e16535caa15e7d6b7942b747f0ab837eb6
 
 function App() {
   return (
-
     <Sfont>
       <BrowserRouter>
         <AppRoutes />
       </BrowserRouter>
     </Sfont>
-
   );
 }
 
@@ -53,8 +47,6 @@ function AppRoutes() {
         <Route path="/ProfilePage" element={<ProfilePage />} />
         <Route path="/MyPage" element={<MyPage />} />
         <Route path="/PayPage" element={<PayPage />} />
-
-
       </Routes>
     </>
   );
