@@ -48,6 +48,7 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 //   [deleteToDo]: (state, action) =>
 //     state.filter((toDo) => toDo.id !== action.payload),
 // });
+import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 const toDos = createSlice({
   name: "toDos", // Slice의 이름을 정의하는 부분
@@ -69,23 +70,11 @@ const toDos = createSlice({
   },
 });
 
-const users = createSlice({
-  name: "usersReducer",
-  initialState: ["등록완료!"],
-  reducers: {
-    printName: (state) => {
-      alert(state);
-    },
-  },
-});
-
 const store = configureStore({
   reducer: {
     toDosReducer: toDos.reducer,
-    usersReducer: users.reducer,
   },
 });
 
 export const { add, remove } = toDos.actions;
-export const { printName } = users.actions;
 export default store;
