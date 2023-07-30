@@ -6,14 +6,14 @@ import LogOut from "../user/LogOut";
 import { useSelector } from "react-redux";
 
 const Nav = () => {
-  const token = localStorage.getItem("persist:root");
-  const [view, setView] = useState(false);
   const user = useSelector((state) => state.users); // useSelector를 통해 userSlice의 상태를 가져옴
+  const [view, setView] = useState(false);
+  console.log(user);
 
   return (
     <SNav>
       <SMenuWrapper>
-        {token ? (
+        {user ? (
           <ul>
             <li>
               <NavLink to="/IntroPage">CRIT</NavLink>
@@ -37,7 +37,7 @@ const Nav = () => {
         )}
       </SMenuWrapper>
       <SUserWrapper>
-        {token ? (
+        {user ? (
           <ul
             onClick={() => {
               setView(!view);
