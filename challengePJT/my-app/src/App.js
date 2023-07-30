@@ -40,10 +40,9 @@ function AppRoutes() {
 
   const showNav = location.pathname !== "/";
 
-  // 로그인하지 않으면 볼수있는 페이지들
-  const authorizedPages = ["/", "/IntroPage", "LoginPage"];
+  const authorizedPages = ["/", "/IntroPage", "/LoginPage", "/SignUpPage"];
 
-  const isAuthorizedPage = !authorizedPages.includes(location.pathname) || user;
+  const isAuthorizedPage = !authorizedPages.includes(location.pathname) & !user;
 
   // 로그인하지 않은 상태에서 보지 못해야할 페이지로 접근하려 하면 로그인 페이지로 Redirect
   if (isAuthorizedPage) {

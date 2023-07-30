@@ -1,8 +1,6 @@
 import {
   SCreateChallengeModalWrapper,
   SInfoChallenge,
-  STextArea,
-  STitleInput,
 } from "../../styles/pages/SChallengePage";
 
 import "react-calendar/dist/Calendar.css"; // css import
@@ -11,13 +9,15 @@ import ChallengeCalendar from "./createChallenge/ChallengeCalendar";
 import ChallengeMember from "./createChallenge/ChallengeMember";
 import ChallengeTime from "./createChallenge/ChallengeTime";
 import SelectChallenge from "./createChallenge/SelectChallenge";
+import IntroduceChallenge from "./createChallenge/IntroduceChallenge";
+import TitleChallenge from "./createChallenge/TitleChallenge";
 
 const CreateChallengeModal = () => {
   return (
     <SCreateChallengeModalWrapper>
-      <STitleInput type="text" placeholder="제목을 입력하세요" />
+      <TitleChallenge />
       <SInfoChallenge>
-        <STextArea placeholder="소개글을 작성하세요"></STextArea>
+        <IntroduceChallenge />
         <SelectChallenge />
         <ChallengeTime />
         <ChallengeAuthentication />
