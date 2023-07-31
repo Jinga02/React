@@ -53,7 +53,6 @@ export const SNaverLoginButton = styled.img`
 `;
 export const Error = styled.div`
   color: #e01e5a;
-  text-align: center;
-  font-size: 20px;
+  margin: 8px 0 16px;
   font-weight: bold;
 `;

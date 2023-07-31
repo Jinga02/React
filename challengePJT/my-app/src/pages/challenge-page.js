@@ -1,18 +1,15 @@
 // style
 import {
-  SButtonWrapper,
-  SCloseButton,
-  SCompleteButton,
-  SCreateChallengeButton,
   SCreateChallengeWrapper,
+  SCreateChallengeButton,
 } from "../styles/pages/SChallengePage";
 
 // 나머지
 import React, { useState } from "react";
 import Modal from "react-modal";
+import MyChallenge from "../component/challenge/MyChallenge";
 import ChallengeBoard from "../component/challenge/ChallengeBoard";
 import CreateChallengeModal from "../component/challenge/CreateChallengeModal";
-import MyChallenge from "../component/challenge/MyChallenge";
 const ChallengePage = () => {
   // 챌린지 만들기 모달
   const [isOpen, setIsOpen] = useState(false);
@@ -60,11 +57,7 @@ const ChallengePage = () => {
         isOpen={isOpen}
         onRequestClose={closeModal}
       >
-        <CreateChallengeModal />
-        <SButtonWrapper>
-          <SCompleteButton>생성완료</SCompleteButton>
-          <SCloseButton onClick={closeModal}>나가기</SCloseButton>
-        </SButtonWrapper>
+        <CreateChallengeModal closeModal={closeModal} />
       </Modal>
     </>
   );
